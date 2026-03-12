@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb7185", // Soft Pink Maternal Theme Primary
+                        "primary-light": "#fff1f2",
+                        "background-light": "#fffafb",
+                        "background-dark": "#1a0f10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Jaundice Risk Assessment | Pink Maternal</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+                <a href="home.html" class="flex items-center gap-3">
+                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                        Maternal</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="home.html">
+                        <span class="material-symbols-outlined text-sm">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="anemia.html">
+                        <span class="material-symbols-outlined text-sm">bloodtype</span>
+                        <span>Anemia</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                        href="jaundice.html">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        <span>Jaundice</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="cardio.html">
+                        <span class="material-symbols-outlined text-sm">monitor_heart</span>
+                        <span>Cardiovascular</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="mentalhealth.html">
+                        <span class="material-symbols-outlined text-sm">self_improvement</span>
+                        <span>Mental Health</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-1 justify-center py-8">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 lg:px-0">
+                    <!-- Header Section -->
+                    <div class="flex flex-col gap-3 mb-8">
+                        <h1
+                            class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em]">
+                            Jaundice Risk Assessment</h1>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal">AI-powered
+                            symptom analysis for early detection and maternal wellness.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left Column: Image Upload & Questionnaire -->
+                        <div class="flex flex-col gap-8">
+                            <!-- 1. Eye or Skin Photo Analysis -->
+                            <section
+                                class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                                <h2
+                                    class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">photo_camera</span>
+                                    1. Eye or Skin Photo Analysis
+                                </h2>
+                                <div
+                                    class="flex flex-col items-center gap-6 rounded-lg border-2 border-dashed border-primary/20 bg-primary/5 px-6 py-10">
+                                    <div class="flex flex-col items-center gap-2 text-center">
+                                        <p class="text-slate-900 dark:text-slate-100 text-lg font-bold">Upload Photo</p>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                                            Take a clear photo of your eyes or skin in natural light for AI color
+                                            analysis. Avoid shadows or artificial yellow lighting.
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                                        <span class="truncate">Select Image</span>
+                                    </button>
+                                </div>
+                            </section>
+                            <!-- 2. Health Questionnaire -->
+                            <section
+                                class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                                <h2
+                                    class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-6 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">quiz</span>
+                                    2. Health Questionnaire
+                                </h2>
+                                <div class="space-y-6">
+                                    <!-- Question 1 -->
+                                    <div class="flex items-center justify-between gap-4">
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Have you
+                                            noticed any yellowing of your eyes or skin?</p>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input class="sr-only peer" type="checkbox" value="" />
+                                            <div
+                                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- Question 2 -->
+                                    <div
+                                        class="flex items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Has your urine
+                                            become darker than usual (dark yellow or brown)?</p>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input class="sr-only peer" type="checkbox" value="" />
+                                            <div
+                                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- Question 3 -->
+                                    <div
+                                        class="flex items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Are you
+                                            feeling extreme tiredness, weakness, or dizziness after delivery?</p>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input class="sr-only peer" type="checkbox" value="" />
+                                            <div
+                                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- Question 4 -->
+                                    <div
+                                        class="flex items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Do you feel
+                                            pain or heaviness in the upper right side of your abdomen?</p>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input class="sr-only peer" type="checkbox" value="" />
+                                            <div
+                                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- Question 5 -->
+                                    <div
+                                        class="flex items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                        <p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Have you
+                                            experienced nausea, vomiting, or loss of appetite recently?</p>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input class="sr-only peer" type="checkbox" value="" />
+                                            <div
+                                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- Right Column: AI Analysis Result -->
+                        <div class="flex flex-col gap-8">
+                            <section
+                                class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm flex flex-col h-full">
+                                <h2
+                                    class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-8 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">analytics</span>
+                                    AI Analysis Result
+                                </h2>
+                                <div class="flex flex-col items-center justify-center flex-1">
+                                    <!-- Visual Gauge -->
+                                    <div class="relative flex items-center justify-center w-64 h-64">
+                                        <svg class="w-full h-full transform -rotate-90">
+                                            <circle class="text-slate-100 dark:text-slate-800" cx="128" cy="128"
+                                                fill="transparent" r="110" stroke="currentColor" stroke-width="20">
+                                            </circle>
+                                            <circle class="text-primary" cx="128" cy="128" fill="transparent" r="110"
+                                                stroke="currentColor" stroke-dasharray="690.8" stroke-dashoffset="400"
+                                                stroke-linecap="round" stroke-width="20"></circle>
+                                        </svg>
+                                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                            <span
+                                                class="text-4xl font-black text-slate-900 dark:text-white">Moderate</span>
+                                            <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Risk
+                                                Level</span>
+                                        </div>
+                                    </div>
+                                    <!-- Bilirubin Score -->
+                                    <div class="mt-8 grid grid-cols-1 w-full gap-4">
+                                        <div
+                                            class="bg-primary/5 border border-primary/10 rounded-lg p-4 flex justify-between items-center">
+                                            <span class="text-slate-600 dark:text-slate-400 font-medium">Predicted
+                                                Bilirubin</span>
+                                            <span class="text-xl font-bold text-primary">1.8 mg/dL</span>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-3 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-900/50 rounded-lg">
+                                            <span
+                                                class="material-symbols-outlined text-yellow-600 mt-0.5">warning</span>
+                                            <p class="text-yellow-800 dark:text-yellow-200 text-sm">Symptoms suggest a
+                                                moderate risk. We recommend scheduling a checkup with your healthcare
+                                                provider soon.</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="mt-8 w-full h-12 bg-primary text-white font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+                                        Generate Full Report
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- Preventive Measures Section -->
+                    <section class="mt-12 mb-12">
+                        <h2
+                            class="text-slate-900 dark:text-slate-100 text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">verified_user</span>
+                            Preventive Measures &amp; Recommendations
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Hydration -->
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:border-primary transition-colors">
+                                <div
+                                    class="size-10 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-blue-500">water_drop</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-slate-100 font-bold mb-2">Hydration</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Ensure you drink
+                                    at least 8-10 glasses of water daily to help flush toxins from your system.</p>
+                            </div>
+                            <!-- Breastfeeding -->
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:border-primary transition-colors">
+                                <div class="size-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-primary">child_care</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-slate-100 font-bold mb-2">Breastfeeding</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Frequent feeding
+                                    helps both mother and baby clear bilirubin and maintain energy levels.</p>
+                            </div>
+                            <!-- Rest & Recovery -->
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:border-primary transition-colors">
+                                <div
+                                    class="size-10 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-purple-500">bedtime</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-slate-100 font-bold mb-2">Rest &amp; Recovery</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Prioritize sleep.
+                                    Your liver recovers best when your body is well-rested and not under stress.</p>
+                            </div>
+                            <!-- Medical Consultation -->
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:border-primary transition-colors">
+                                <div
+                                    class="size-10 bg-red-50 dark:bg-red-900/30 rounded-lg flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-red-500">medical_services</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-slate-100 font-bold mb-2">Medical Consultation</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">If symptoms
+                                    persist or jaundice deepens, contact your doctor immediately for blood tests.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="border-t border-primary/10 py-10 px-6 lg:px-40 bg-white dark:bg-slate-900">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">health_and_safety</span>
+                        <span class="font-bold text-slate-900 dark:text-white">Pink Maternal AI</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">© 2024 Pink Maternal. For screening purposes only. Not a medical
+                        diagnosis.</p>
+                    <div class="flex gap-6">
+                        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Privacy
+                            Policy</a>
+                        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="#">Terms of
+                            Service</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <nav
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="home.html">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="anemia.html">
+            <span class="material-symbols-outlined">bloodtype</span>
+            <span class="text-[10px] font-bold">Anemia</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-primary" href="jaundice.html">
+            <span class="material-symbols-outlined">visibility</span>
+            <span class="text-[10px] font-bold">Jaundice</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="cardio.html">
+            <span class="material-symbols-outlined">monitor_heart</span>
+            <span class="text-[10px] font-bold">Heart</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="mentalhealth.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-bold">Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>

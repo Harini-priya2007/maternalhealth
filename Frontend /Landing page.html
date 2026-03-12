@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb7185", // Soft Pink Maternal Theme Primary
+                        "primary-light": "#fff1f2",
+                        "background-light": "#fffafb",
+                        "background-dark": "#1a0f10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Pink Maternal - Empowering Motherhood</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+                <a href="Landing page.html" class="flex items-center gap-3">
+                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                        Maternal</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                        href="Landing page.html">
+                        <span class="material-symbols-outlined text-sm">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="Login.html">
+                        <span class="material-symbols-outlined text-sm">login</span>
+                        <span>Sign In</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="window.location.href='Login.html'"
+                        class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:brightness-110 transition-all">
+                        Get Started
+                    </button>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <section class="px-6 md:px-20 lg:px-40 py-12 md:py-20 bg-gradient-to-br from-primary/5 to-transparent">
+                    <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-8">
+                            <div class="flex flex-col gap-4">
+                                <span class="text-primary font-bold tracking-widest text-sm uppercase">Early Detection
+                                    Saves Lives</span>
+                                <h1
+                                    class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-slate-100">
+                                    Healthier Motherhood through AI Precision
+                                </h1>
+                                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-[540px]">
+                                    Our advanced AI platform empowers mothers and clinicians to detect cardiovascular
+                                    risks, anemia, and jaundice earlier than ever before.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-4">
+                                <button onclick="window.location.href='Login.html'"
+                                    class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+                                    Start Your Health Scan
+                                </button>
+                                <button
+                                    class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 border-2 border-primary/20 bg-white/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 text-base font-bold hover:bg-primary/10 transition-colors">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity">
+                            </div>
+                            <div class="relative aspect-video lg:aspect-square w-full bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-white/20"
+                                data-alt="Doctor consulting a smiling pregnant woman in a modern medical clinic."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDj3o-ojfEDYVNM4QDtdsMTclO7xfCVuBkJPcXN9U1GGpctpiEytCLg3TTbZ1-GHhxgK5hZMBGvUtRo3BgYHJTfY_8y2ps48bnshMiuaAsbA4MZbrUVH7_AVBQ7IazLfa5q6kLFmNRQjZjoSvg0nB8jiKbAtrD88AgP3UOPPfb0yyip9uWGJ5hpKQfS4SnbOHElxTYwAFOdMPA-_PfVyQx0zvl1iTdT-PHRhIObl7H3RqBcDQy1hiI6b7YSVwEKYG7CDFPuJIpsOgs");'>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 1. Platform Overview -->
+                <section class="px-6 md:px-20 lg:px-40 py-20 bg-white dark:bg-slate-900/50" id="solutions">
+                    <div class="max-w-[1200px] mx-auto">
+                        <div class="flex flex-col gap-4 mb-12">
+                            <h2 class="text-3xl font-bold tracking-tight">Comprehensive Health Monitoring</h2>
+                            <p class="text-slate-600 dark:text-slate-400 max-w-2xl">Targeted AI screening tools designed
+                                specifically for the unique needs of maternal and neonatal health.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div
+                                class="group flex flex-col gap-4 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-slate-800/30 hover:border-primary/50 transition-colors">
+                                <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 overflow-hidden"
+                                    data-alt="Visual representation of heart rate and cardiovascular health markers."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmkbI9B-Iz_DiAn9uAFNvov5Cs5lfLNXZHP8IPIAkCpc8hyKdF-rHA87OMbvdvxsTAEzPYNvnKph6uY0vi_nfYM_b9I1Dg0LRsqEGj1cd8ksjXe2hwvSHWhPSfivzPqXRT_fJEfMa9QT1vG_-U41OD321-hF1_lgmU-npDrT-bBuIHtzDRvVTHG34rCovF2NXeGSPzLL6JKIlJ45-lPWZiB30D86VBUL1OGsA7qFX9xiQW58-lpId3AqeHMC00aJ4m3R6zOdauy9A");'>
+                                </div>
+                                <div class="flex items-center gap-3 text-primary">
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <h3 class="text-xl font-bold">Cardiovascular Health</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Early detection of
+                                    preeclampsia and heart strain through real-time vital sign analysis and predictive
+                                    modeling.</p>
+                            </div>
+                            <div
+                                class="group flex flex-col gap-4 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-slate-800/30 hover:border-primary/50 transition-colors">
+                                <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 overflow-hidden"
+                                    data-alt="Microscopic view of blood cells showing anemia indicators."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPVpY009oZTa4lM-h_Xu2Tv7bLNwIZ5ovXdK0iO_QzT5Q-9j8rylB5rkkMVUUp0jVy4f-GNAn1tjU7QqIyoAhNq0sErV_Xfsw0TnqmTJeXBeJr-pZggS0nkVeei0JPs93B49icV2KQTO8wFI8IOKL4L2D3nGIn97dZCkeh6HpZ4EETwrhqszMWrMGy9sVGqPCprzCqkUl6ZXLCxrv26ZltYoN2bJ8jlxKbhjmDOFGztz10bZsiEwoRgpUsUdeIhz3XnicuXXZsDn8");'>
+                                </div>
+                                <div class="flex items-center gap-3 text-primary">
+                                    <span class="material-symbols-outlined">bloodtype</span>
+                                    <h3 class="text-xl font-bold">Anemia Detection</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Non-invasive
+                                    screening via optical sensors that identify iron deficiency early to support healthy
+                                    fetal development.</p>
+                            </div>
+                            <div
+                                class="group flex flex-col gap-4 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-slate-800/30 hover:border-primary/50 transition-colors">
+                                <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 rounded-lg mb-4 overflow-hidden"
+                                    data-alt="Newborn baby being screened with a handheld scanner."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8U6Au5FfZ1vt-DW4fHkLv4p59Xn3Kt_FAz-fcac2LNAQOg-CyFed6-eCRspgaWNbbskZrxYvIhxfopN54RKg6OhYt-mHwDiUNr53givRx78iWDakazZfugpElJxEm_Y3ZGDdnebZQ4PdOpTpu8RLRUdjb2nyJFM6P1zpjOaKZrksFVCRFjQAHS-iYD8LJQWktNVTkGsCl5peIhIPXT6w7mAIJ3jvlFkmEeb-C0-GZGvrcYyZqMsRgKOejsDobt14_UBT00UumOnU");'>
+                                </div>
+                                <div class="flex items-center gap-3 text-primary">
+                                    <span class="material-symbols-outlined">child_care</span>
+                                    <h3 class="text-xl font-bold">Jaundice Screening</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Instant neonatal
+                                    bilirubin level estimation using smartphone cameras, ensuring prompt care for
+                                    newborns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 2. Key Benefits -->
+                <section class="px-6 md:px-20 lg:px-40 py-20 bg-background-light dark:bg-background-dark" id="benefits">
+                    <div class="max-w-[1200px] mx-auto">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                            <div class="flex flex-col gap-8">
+                                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Empowering the Full Circle of
+                                    Care</h2>
+                                <p class="text-slate-600 dark:text-slate-400">Our platform bridges the gap between home
+                                    monitoring and clinical expertise, creating a safer environment for everyone
+                                    involved.</p>
+                                <div class="flex flex-col gap-6">
+                                    <div class="flex gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm">
+                                        <div
+                                            class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                            <span class="material-symbols-outlined">verified_user</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg">For Mothers</h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400">Daily peace of mind
+                                                with easy-to-use tools that translate complex medical data into clear
+                                                health insights.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 shadow-sm">
+                                        <div
+                                            class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                            <span class="material-symbols-outlined">medical_services</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg">For Health Workers</h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400">Prioritized patient
+                                                alerts and automated workflows that allow medical teams to focus on
+                                                high-risk cases efficiently.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex items-center justify-center">
+                                <div
+                                    class="w-full aspect-square rounded-full bg-primary/10 border-4 border-dashed border-primary/20 flex items-center justify-center relative overflow-hidden">
+                                    <div class="z-10 w-4/5 h-4/5 rounded-2xl shadow-xl overflow-hidden bg-white dark:bg-slate-800"
+                                        data-alt="A collage of a mother using a mobile app and a doctor reviewing a digital dashboard."
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7YJhPv7ZmujUOtG_B8jjYv3zQ2B4PvlJRn5_Sq3AxrYs--vu1_sz98EQvbecO8PZwWv-ZGCvTAEjzJBFmtUday2U2lGksgyCmy6_2nTwc4qxbspTphwHr9HijmGvAgHwxz617SDYHU5zsf8oaraAU87kUKgBdjOELVHupUdPyuWCpcgKLs1UzOQsRmlibV5Bd-GrY6WhI_PTD6JwlnHAzS33uYV_0HH6JSpeVY9L7RHrCigcClJQCii1A4KAgcURueL2ZP1Ou4oM");'>
+                                    </div>
+                                    <div
+                                        class="absolute top-10 right-10 bg-primary/40 size-20 rounded-full blur-xl animate-pulse">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 3. How it Works (AI Visualization) -->
+                <section class="px-6 md:px-20 lg:px-40 py-20 bg-[#2d0f19] text-white overflow-hidden relative"
+                    id="how-it-works">
+                    <div
+                        class="absolute inset-0 opacity-10 bg-[radial-gradient(#fb7185_1px,transparent_1px)] [background-size:20px_20px]">
+                    </div>
+                    <div class="max-w-[1000px] mx-auto relative z-10 text-center flex flex-col items-center gap-12">
+                        <div class="flex flex-col gap-4">
+                            <h2 class="text-4xl font-bold">The Science Behind the Shield</h2>
+                            <p class="text-slate-300 max-w-xl mx-auto">Our multi-layered AI architecture analyzes
+                                biometric data with 99.4% clinical accuracy.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="size-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">sensors</span>
+                                </div>
+                                <h5 class="font-bold">Data Input</h5>
+                                <div class="h-px w-12 bg-primary/30 hidden md:block"></div>
+                            </div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="size-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">psychology</span>
+                                </div>
+                                <h5 class="font-bold">AI Analysis</h5>
+                                <div class="h-px w-12 bg-primary/30 hidden md:block"></div>
+                            </div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="size-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">rule</span>
+                                </div>
+                                <h5 class="font-bold">Risk Scoring</h5>
+                                <div class="h-px w-12 bg-primary/30 hidden md:block"></div>
+                            </div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="size-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">notifications_active</span>
+                                </div>
+                                <h5 class="font-bold">Alert Delivery</h5>
+                            </div>
+                        </div>
+                        <div class="w-full h-64 bg-slate-800/50 border border-white/10 rounded-2xl flex items-center justify-center"
+                            data-alt="Abstract visualization of neural networks and data flowing through a maternal health dashboard."
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwL4KBGtZLa-2N8W79HgQQwvNXffBZmxY0_yM2JcBHcKDaw3uo4WRLDlcfteLXFMhbomVxDMmuknA6-DTH46RgjaiKv41reffEHpPGXDrqN7bA9BsdNhKWKNrJk3_3v_JQ44rjDrXTvuJpPHB-DlMWf-Nkn8UQIn61Lqo9AQWy8DyBZ3UHg_ZnfqJIxNmTp1EZKFXdbdbehj3fLrzNa9aemK2k4pwa5Hxg5mZPYpvZ4nYjf2MQvXcQdMXpE8eMiKnqL6qZSza_Jg4");'>
+                            <div class="flex flex-col items-center gap-2">
+                                <span class="text-primary font-mono text-sm">SECURE END-TO-END ENCRYPTION</span>
+                                <div class="flex gap-2">
+                                    <div class="h-1 w-8 bg-primary rounded-full"></div>
+                                    <div class="h-1 w-8 bg-primary/40 rounded-full"></div>
+                                    <div class="h-1 w-8 bg-primary/40 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 4. Final CTA -->
+                <section class="px-6 md:px-20 lg:px-40 py-24 bg-white dark:bg-slate-900">
+                    <div
+                        class="max-w-[1200px] mx-auto bg-primary/10 rounded-[2rem] p-8 md:p-16 flex flex-col items-center text-center gap-8 border border-primary/20">
+                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100 max-w-3xl">Ready
+                            to ensure a safer health journey?</h2>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl">Join thousands of mothers and
+                            healthcare professionals using our AI for early detection and prevention.</p>
+                        <button onclick="window.location.href='Login.html'"
+                            class="flex min-w-[280px] cursor-pointer items-center justify-center rounded-xl h-16 px-10 bg-primary text-white text-xl font-bold shadow-xl shadow-primary/30 hover:scale-105 transition-all">
+                            Start Your Health Scan
+                        </button>
+                        <p class="text-sm text-primary font-medium flex items-center gap-2">
+                            <span class="material-symbols-outlined text-base">lock</span>
+                            HIPAA Compliant &amp; Privacy Focused
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer
+                class="px-6 md:px-20 lg:px-40 py-12 border-t border-primary/10 bg-background-light dark:bg-background-dark">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-slate-900 dark:text-slate-100">
+                            <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                            <h2 class="text-lg font-bold">Pink Maternal</h2>
+                        </div>
+                        <p class="text-sm text-slate-500">Pioneering early detection for maternal and neonatal wellness
+                            through artificial intelligence.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold">Platform</h4>
+                        <ul class="text-sm text-slate-500 flex flex-col gap-2">
+                            <li><a class="hover:text-primary" href="#">Cardiovascular Scan</a></li>
+                            <li><a class="hover:text-primary" href="#">Anemia Screening</a></li>
+                            <li><a class="hover:text-primary" href="#">Neonatal Jaundice</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold">Company</h4>
+                        <ul class="text-sm text-slate-500 flex flex-col gap-2">
+                            <li><a class="hover:text-primary" href="#">About Us</a></li>
+                            <li><a class="hover:text-primary" href="#">Research</a></li>
+                            <li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold">Connect</h4>
+                        <div class="flex gap-4">
+                            <div
+                                class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
+                                <span class="material-symbols-outlined text-xl">share</span>
+                            </div>
+                            <div
+                                class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
+                                <span class="material-symbols-outlined text-xl">mail</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400">
+                    © 2024 Pink Maternal. For informational purposes only. Consult with a medical professional for
+                    diagnosis.
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

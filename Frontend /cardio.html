@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pink Maternal - Cardiovascular Analysis</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb7185", // Soft Pink Maternal Theme Primary
+                        "primary-light": "#fff1f2",
+                        "background-light": "#fffafb",
+                        "background-dark": "#1a0f10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="layout-container flex h-full grow flex-col">
+        <!-- Top Navigation Bar -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+            <a href="home.html" class="flex items-center gap-3">
+                <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                    <span class="material-symbols-outlined">health_and_safety</span>
+                </div>
+                <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                    Maternal</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="home.html">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    <span>Home</span>
+                </a>
+                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="anemia.html">
+                    <span class="material-symbols-outlined text-sm">bloodtype</span>
+                    <span>Anemia</span>
+                </a>
+                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="jaundice.html">
+                    <span class="material-symbols-outlined text-sm">visibility</span>
+                    <span>Jaundice</span>
+                </a>
+                <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                    href="cardio.html">
+                    <span class="material-symbols-outlined text-sm">monitor_heart</span>
+                    <span>Cardiovascular</span>
+                </a>
+                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="mentalhealth.html">
+                    <span class="material-symbols-outlined text-sm">self_improvement</span>
+                    <span>Mental Health</span>
+                </a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                </div>
+            </div>
+        </header>
+        <main class="max-w-6xl mx-auto px-6 py-10 w-full">
+            <!-- Header Section -->
+            <div class="mb-10">
+                <h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight mb-2">AI
+                    Cardiovascular Risk Analysis</h1>
+                <p class="text-slate-500 dark:text-slate-400 text-lg font-normal">Advanced heart health monitoring using
+                    smartphone PPG technology</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left Column: Scanning & Results -->
+                <div class="lg:col-span-7 flex flex-col gap-8">
+                    <!-- Scanning Interface -->
+                    <div
+                        class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="relative w-40 h-40 flex items-center justify-center">
+                                <div class="absolute inset-0 rounded-full bg-primary/10 animate-pulse"></div>
+                                <div
+                                    class="absolute inset-4 rounded-full border-4 border-dashed border-primary/40 rotate-180">
+                                </div>
+                                <div
+                                    class="z-10 bg-white dark:bg-slate-800 rounded-full p-4 shadow-xl border border-primary/20">
+                                    <span class="material-symbols-outlined text-primary text-6xl">favorite</span>
+                                </div>
+                            </div>
+                            <div class="flex-1 space-y-4 text-center md:text-left">
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">Smartphone PPG Heart
+                                    Scan</h3>
+                                <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Place your finger firmly over your phone's camera and flash. The AI will detect
+                                    micro-changes in blood color to estimate heart rate and cardiovascular health.
+                                </p>
+                                <button
+                                    class="w-full md:w-auto px-8 py-3 bg-primary hover:bg-rose-600 text-white rounded-lg font-bold shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined">sensors</span>
+                                    Take PPG Scan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Risk Level Indicator -->
+                    <div
+                        class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
+                        <div class="flex justify-between items-end mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">Current Risk Level</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Last scan: Today, 10:30 AM</p>
+                            </div>
+                            <span
+                                class="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-xs font-bold uppercase tracking-wider">Stable</span>
+                        </div>
+                        <div class="relative pt-4 pb-8">
+                            <div class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+                                <div class="h-full bg-green-400" style="width: 40%"></div>
+                                <div class="h-full bg-yellow-400" style="width: 30%"></div>
+                                <div class="h-full bg-red-400" style="width: 30%"></div>
+                            </div>
+                            <!-- Needle/Marker -->
+                            <div class="absolute top-0 left-[25%] -translate-x-1/2 flex flex-col items-center">
+                                <span class="material-symbols-outlined text-primary fill-1">arrow_drop_down</span>
+                                <div class="w-1 h-8 bg-primary"></div>
+                            </div>
+                            <div
+                                class="flex justify-between mt-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                <span>Low Risk</span>
+                                <span>Moderate</span>
+                                <span>High Risk</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div
+                                class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
+                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Heart Rate</p>
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200">72 <span
+                                        class="text-sm font-normal text-slate-500">BPM</span></p>
+                            </div>
+                            <div
+                                class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
+                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Perfusion Index
+                                </p>
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200">4.2 <span
+                                        class="text-sm font-normal text-slate-500">%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Charts Section -->
+                    <div
+                        class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6">Heart Rate Trend</h3>
+                        <div class="h-64 w-full flex items-end justify-between gap-2 px-2">
+                            <!-- Placeholder Bar Chart -->
+                            <div
+                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[60%]">
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                    68 BPM</div>
+                            </div>
+                            <div
+                                class="w-full bg-rose-200 dark:bg-rose-800/40 rounded-t-lg relative group h-[65%]">
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                    70 BPM</div>
+                            </div>
+                            <div
+                                class="w-full bg-rose-300 dark:bg-rose-700/60 rounded-t-lg relative group h-[75%]">
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                    74 BPM</div>
+                            </div>
+                            <div class="w-full bg-primary rounded-t-lg relative group h-[72%]">
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                    72 BPM</div>
+                            </div>
+                            <div
+                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[70%] opacity-50">
+                            </div>
+                            <div
+                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[68%] opacity-50">
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-xs font-medium text-slate-400 px-2">
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4 (Now)</span>
+                            <span>Forecast</span>
+                            <span>Forecast</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Recommendations & Tips -->
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    <!-- AI Cardiac Recommendations -->
+                    <div
+                        class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="material-symbols-outlined text-primary">heart_plus</span>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">AI Cardiac Recommendations
+                            </h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div
+                                class="flex items-center gap-4 p-3 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors border border-transparent hover:border-rose-100">
+                                <div
+                                    class="size-12 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">no_food</span>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-bold text-slate-800 dark:text-slate-200">Low Sodium Diet</p>
+                                    <p class="text-xs text-slate-500">Reduce salt intake to manage blood pressure</p>
+                                </div>
+                                <span class="text-xs font-bold text-primary">Daily Goal</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 p-3 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors border border-transparent hover:border-rose-100">
+                                <div
+                                    class="size-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600">
+                                    <span class="material-symbols-outlined">directions_walk</span>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-bold text-slate-800 dark:text-slate-200">Prenatal Exercise</p>
+                                    <p class="text-xs text-slate-500">Light walking or yoga for heart strength</p>
+                                </div>
+                                <span class="text-xs font-bold text-primary">30m Daily</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 p-3 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors border border-transparent hover:border-rose-100">
+                                <div
+                                    class="size-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">water_drop</span>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-bold text-slate-800 dark:text-slate-200">Hydration</p>
+                                    <p class="text-xs text-slate-500">Maintain blood volume and reduce cardiac load</p>
+                                </div>
+                                <span class="text-xs font-bold text-primary">2.5L Daily</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-6 py-3 border-2 border-primary/20 hover:border-primary text-primary font-bold rounded-lg transition-all text-sm">
+                            View Full Heart Health Plan
+                        </button>
+                    </div>
+                    <!-- Health Tips -->
+                    <div
+                        class="bg-primary text-white rounded-xl p-8 shadow-lg shadow-primary/20 relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 size-40 bg-white/10 rounded-full"></div>
+                        <div class="absolute -left-5 -top-5 size-20 bg-white/10 rounded-full"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                                Health Tips
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="shrink-0 size-8 bg-white/20 rounded flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">self_improvement</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm">Manage Stress</p>
+                                        <p class="text-xs text-white/80 mt-1 leading-relaxed">High stress impacts heart
+                                            rate variability. Practice deep breathing for 5 minutes daily.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="shrink-0 size-8 bg-white/20 rounded flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">history_toggle_off</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm">Regular Monitoring</p>
+                                        <p class="text-xs text-white/80 mt-1 leading-relaxed">Consistent scans help
+                                            detect trends early. Try to scan at the same time each morning.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="shrink-0 size-8 bg-white/20 rounded flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">bedtime</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm">Prioritize Sleep</p>
+                                        <p class="text-xs text-white/80 mt-1 leading-relaxed">Sleep is vital for
+                                            cardiovascular recovery. Aim for 7-9 hours of restful sleep.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Support Card -->
+                    <div class="bg-slate-900 text-white rounded-xl p-6 flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Heart concerns?
+                            </p>
+                            <p class="font-bold">Consult a Specialist</p>
+                        </div>
+                        <button class="bg-primary p-3 rounded-lg hover:bg-rose-600 transition-colors">
+                            <span class="material-symbols-outlined">medical_services</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mt-20 border-t border-rose-100 dark:border-rose-900/20 py-10 text-center">
+            <p class="text-slate-400 text-sm">© 2024 Maternal Health AI. For informational purposes only.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

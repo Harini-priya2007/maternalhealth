@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pink Maternal Health Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb7185", // Soft Pink Maternal Theme Primary
+                        "primary-light": "#fff1f2",
+                        "background-light": "#fffafb",
+                        "background-dark": "#1a0f10",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+                <a href="home.html" class="flex items-center gap-3">
+                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                        Maternal</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                        href="home.html">
+                        <span class="material-symbols-outlined text-sm">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="anemia.html">
+                        <span class="material-symbols-outlined text-sm">bloodtype</span>
+                        <span>Anemia</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="jaundice.html">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        <span>Jaundice</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="cardio.html">
+                        <span class="material-symbols-outlined text-sm">monitor_heart</span>
+                        <span>Cardiovascular</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="mentalhealth.html">
+                        <span class="material-symbols-outlined text-sm">self_improvement</span>
+                        <span>Mental Health</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="size-10 rounded-full border-2 border-primary bg-center bg-cover"
+                        data-alt="Avatar of a smiling pregnant woman"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                    </div>
+                </div>
+            </header>
+            <main class="max-w-[1200px] mx-auto w-full px-6 py-8">
+                <section class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                        <div>
+                            <h1 class="text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Good
+                                morning, Sarah</h1>
+                            <p class="text-slate-500 dark:text-slate-400 mt-2 text-lg">Your health journey is looking
+                                great today. We're here for you.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-sm font-semibold flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">check_circle</span> Week 28
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <!-- New Daily Progress & Checklist Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Daily Progress & Weekly Streak -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <div
+                            class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-rose-100 dark:border-rose-900/20 shadow-sm">
+                            <h3
+                                class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">
+                                Daily Progress</h3>
+                            <div class="flex flex-col items-center">
+                                <div class="relative size-40">
+                                    <svg class="size-full -rotate-90" viewbox="0 0 36 36">
+                                        <circle class="stroke-rose-100 dark:stroke-slate-800" cx="18" cy="18"
+                                            fill="none" r="16" stroke-width="3"></circle>
+                                        <circle class="stroke-primary" cx="18" cy="18" fill="none" r="16"
+                                            stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3"></circle>
+                                    </svg>
+                                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                        <span class="text-3xl font-black text-slate-900 dark:text-white">3/4</span>
+                                        <span
+                                            class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Tasks
+                                            Done</span>
+                                    </div>
+                                </div>
+                                <p class="text-center text-slate-600 dark:text-slate-400 text-sm mt-6">You're almost
+                                    there! Complete your Mood Journal to reach 100%.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-rose-100 dark:border-rose-900/20 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
+                                    Weekly Streak</h3>
+                                <span class="flex items-center gap-1 text-primary font-bold text-sm">
+                                    <span class="material-symbols-outlined text-sm">local_fire_department</span> 5 Days
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center gap-2">
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold">
+                                        M</div>
+                                    <span class="material-symbols-outlined text-primary text-xs">check</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold">
+                                        T</div>
+                                    <span class="material-symbols-outlined text-primary text-xs">check</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold">
+                                        W</div>
+                                    <span class="material-symbols-outlined text-primary text-xs">check</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold">
+                                        T</div>
+                                    <span class="material-symbols-outlined text-primary text-xs">check</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold">
+                                        F</div>
+                                    <span class="material-symbols-outlined text-primary text-xs">check</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 opacity-30">
+                                    <div
+                                        class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 flex items-center justify-center text-[10px] font-bold">
+                                        S</div>
+                                    <span class="material-symbols-outlined text-slate-300 text-xs">circle</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 opacity-30">
+                                    <div
+                                        class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 flex items-center justify-center text-[10px] font-bold">
+                                        S</div>
+                                    <span class="material-symbols-outlined text-slate-300 text-xs">circle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Today's Checklist -->
+                    <div class="lg:col-span-2">
+                        <div
+                            class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-rose-100 dark:border-rose-900/20 shadow-sm h-full">
+                            <div class="flex items-center justify-between mb-8">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+                                        Today's Checklist</h2>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Focus on these key habits
+                                        for a healthy pregnancy.</p>
+                                </div>
+                                <button class="text-primary font-bold text-sm hover:underline">Add Custom Task</button>
+                            </div>
+                            <div class="space-y-4">
+                                <label
+                                    class="flex items-center justify-between p-5 rounded-xl border border-rose-50 dark:border-rose-900/10 bg-rose-50/30 dark:bg-rose-900/5 hover:border-primary transition-all cursor-pointer group">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-6 rounded-md border-2 border-primary bg-primary flex items-center justify-center text-white">
+                                            <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="block font-bold text-slate-900 dark:text-slate-100 line-through opacity-60">Hydration</span>
+                                            <span class="text-xs text-slate-500">Target: 2.5 Liters (Completed)</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 dark:text-slate-700">water_drop</span>
+                                </label>
+                                <label
+                                    class="flex items-center justify-between p-5 rounded-xl border border-rose-50 dark:border-rose-900/10 bg-rose-50/30 dark:bg-rose-900/5 hover:border-primary transition-all cursor-pointer group">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-6 rounded-md border-2 border-primary bg-primary flex items-center justify-center text-white">
+                                            <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="block font-bold text-slate-900 dark:text-slate-100 line-through opacity-60">Prenatal
+                                                Vitamins</span>
+                                            <span class="text-xs text-slate-500">Morning dose taken</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 dark:text-slate-700">pill</span>
+                                </label>
+                                <label
+                                    class="flex items-center justify-between p-5 rounded-xl border border-rose-50 dark:border-rose-900/10 bg-rose-50/30 dark:bg-rose-900/5 hover:border-primary transition-all cursor-pointer group">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-6 rounded-md border-2 border-primary bg-primary flex items-center justify-center text-white">
+                                            <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="block font-bold text-slate-900 dark:text-slate-100 line-through opacity-60">Light
+                                                Walk</span>
+                                            <span class="text-xs text-slate-500">20 minutes in the garden</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 dark:text-slate-700">directions_walk</span>
+                                </label>
+                                <label
+                                    class="flex items-center justify-between p-5 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary transition-all cursor-pointer group">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-6 rounded-md border-2 border-slate-300 dark:border-slate-600 group-hover:border-primary transition-colors">
+                                        </div>
+                                        <div>
+                                            <span class="block font-bold text-slate-900 dark:text-slate-100">Mood
+                                                Journal</span>
+                                            <span class="text-xs text-slate-500">How are you feeling today?</span>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-slate-400">edit_note</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="bg-primary/5 rounded-2xl p-8 border border-dashed border-primary/30 flex items-center gap-6">
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Upcoming Appointment
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Dr. Emily Chen • Prenatal Checkup
+                            </p>
+                            <div class="flex items-center gap-4 text-sm font-bold text-primary">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">calendar_month</span> Oct 24</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">schedule</span> 10:30 AM</span>
+                            </div>
+                        </div>
+                        <button
+                            class="size-12 rounded-full bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">event</span>
+                        </button>
+                    </div>
+                    <div
+                        class="bg-slate-900 dark:bg-slate-800 rounded-2xl p-8 text-white relative overflow-hidden group">
+                        <div
+                            class="absolute -right-4 -bottom-4 size-32 bg-primary rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <h4 class="text-xl font-bold mb-2">Need immediate support?</h4>
+                            <p class="text-slate-400 text-sm mb-4">Chat with our 24/7 maternal health specialists right
+                                now.</p>
+                            <button
+                                class="bg-white text-slate-900 px-6 py-2 rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                                Start Chat
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer
+                class="mt-auto py-10 px-6 border-t border-rose-100 dark:border-rose-900/20 bg-white dark:bg-slate-950">
+                <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">health_and_safety</span>
+                        <span class="font-bold text-slate-400">PINK MATERNAL HEALTH</span>
+                    </div>
+                    <div class="flex gap-8 text-sm font-medium text-slate-500">
+                        <a class="hover:text-primary" href="#">Terms</a>
+                        <a class="hover:text-primary" href="#">Privacy</a>
+                        <a class="hover:text-primary" href="#">Help Center</a>
+                        <a class="hover:text-primary" href="#">Community</a>
+                    </div>
+                    <p class="text-xs text-slate-400">© 2024 Pink Maternal. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <nav
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+        <a class="flex flex-col items-center gap-1 text-primary" href="home.html">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="anemia.html">
+            <span class="material-symbols-outlined">bloodtype</span>
+            <span class="text-[10px] font-bold">Anemia</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="jaundice.html">
+            <span class="material-symbols-outlined">visibility</span>
+            <span class="text-[10px] font-bold">Jaundice</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="cardio.html">
+            <span class="material-symbols-outlined">monitor_heart</span>
+            <span class="text-[10px] font-bold">Heart</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-400" href="mentalhealth.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-bold">Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>
