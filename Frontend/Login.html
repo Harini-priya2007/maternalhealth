@@ -76,39 +76,54 @@
                     <!-- Auth Side -->
                     <div class="flex flex-col gap-6">
                         <div class="flex flex-col gap-2">
-                            <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Create Your
+                            <h2 id="authTitle" class="text-3xl font-bold text-slate-900 dark:text-slate-100">Create Your
                                 Account</h2>
-                            <p class="text-slate-600 dark:text-slate-400">Join our community for better
+                            <p id="authSubtitle" class="text-slate-600 dark:text-slate-400">Join our community for better
                                 maternal health support.</p>
                         </div>
+                        <div class="grid grid-cols-2 gap-2 p-1 rounded-xl bg-slate-100 dark:bg-slate-800">
+                            <button id="signupModeBtn" type="button" onclick="setAuthMode('signup')"
+                                class="h-10 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 font-semibold">Create Account</button>
+                            <button id="loginModeBtn" type="button" onclick="setAuthMode('login')"
+                                class="h-10 rounded-lg text-slate-600 dark:text-slate-300 font-semibold">Log In</button>
+                        </div>
                         <!-- Role Selection -->
-                        <div class="flex flex-col gap-4">
+                        <div id="roleSection" class="flex flex-col gap-4">
                             <h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200">Who are you?
                             </h3>
                             <div class="grid grid-cols-3 gap-3">
                                 <button
+                                       type="button"
+                                       onclick="selectRole('Mother', this)"
                                     class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 text-slate-900 dark:text-slate-100 transition-colors">
                                     <span class="material-symbols-outlined text-primary text-3xl mb-2">favorite</span>
                                     <span class="text-xs font-bold uppercase tracking-wider">Mother</span>
                                 </button>
                                 <button
+                                       type="button"
+                                       onclick="selectRole('Government', this)"
                                     class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 text-slate-600 dark:text-slate-400 transition-colors">
                                     <span class="material-symbols-outlined text-3xl mb-2">medical_information</span>
                                     <span class="text-xs font-bold uppercase tracking-wider">Government<br></span>
                                 </button>
                                 <button
+                                       type="button"
+                                       onclick="selectRole('Doctor', this)"
                                     class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 text-slate-600 dark:text-slate-400 transition-colors">
                                     <span class="material-symbols-outlined text-3xl mb-2">stethoscope</span>
                                     <span class="text-xs font-bold uppercase tracking-wider">Doctor</span>
                                 </button>
                             </div>
                         </div>
-                        <!-- Signup Form -->
-                        <form class="flex flex-col gap-4">
+                                <!-- Signup Form -->
+                           <form id="signupForm" class="flex flex-col gap-4" onsubmit="handleSignup(event)">
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-sm font-medium text-slate-700 dark:text-slate-300 px-1">Full
                                     Name</label>
                                 <input
+                                       id="fullName"
+                                       name="fullName"
+                                       required
                                     class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                                     placeholder="Jane Doe" type="text">
                             </div>
@@ -116,6 +131,9 @@
                                 <label class="text-sm font-medium text-slate-700 dark:text-slate-300 px-1">Email
                                     Address</label>
                                 <input
+                                       id="email"
+                                       name="email"
+                                       required
                                     class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                                     placeholder="jane@example.com" type="email">
                             </div>
@@ -124,6 +142,9 @@
                                     class="text-sm font-medium text-slate-700 dark:text-slate-300 px-1">Password</label>
                                 <div class="relative">
                                     <input
+                                           id="password"
+                                           name="password"
+                                           required
                                         class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                                         placeholder="••••••••" type="password">
                                     <button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"
@@ -132,6 +153,8 @@
                                     </button>
                                 </div>
                             </div>
+                               <div id="errorMessage" class="hidden px-4 py-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm font-medium"></div>
+                               <div id="successMessage" class="hidden px-4 py-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-sm font-medium"></div>
                             <div class="flex items-center gap-2 mt-2">
                                 <input
                                     class="rounded text-primary focus:ring-primary border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"
@@ -141,10 +164,32 @@
                                         Service</a> and <a class="text-primary hover:underline" href="#">Privacy
                                         Policy</a></label>
                             </div>
-                            <button onclick="event.preventDefault(); window.location.href='home.html'"
-                                class="w-full h-12 bg-primary text-white font-bold rounded-lg mt-4 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity"
+                               <button id="submitBtn"
+                                   class="w-full h-12 bg-primary text-white font-bold rounded-lg mt-4 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity"
                                 type="submit">
                                 Create Account
+                            </button>
+                        </form>
+                        <!-- Login Form -->
+                        <form id="loginForm" class="hidden flex flex-col gap-4" onsubmit="handleLogin(event)">
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300 px-1">Email Address</label>
+                                <input id="loginEmail" name="loginEmail" required
+                                    class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="jane@example.com" type="email">
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300 px-1">Password</label>
+                                <input id="loginPassword" name="loginPassword" required
+                                    class="w-full h-12 px-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="••••••••" type="password">
+                            </div>
+                            <div id="loginErrorMessage" class="hidden px-4 py-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm font-medium"></div>
+                            <div id="loginSuccessMessage" class="hidden px-4 py-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-sm font-medium"></div>
+                            <button id="loginSubmitBtn"
+                                class="w-full h-12 bg-primary text-white font-bold rounded-lg mt-4 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity"
+                                type="submit">
+                                Log In
                             </button>
                         </form>
                         <div class="relative flex items-center gap-4 my-2">
@@ -168,7 +213,7 @@
                         </div>
                         <p class="text-center text-sm text-slate-600 dark:text-slate-400">
                             Already have an account? <a class="text-primary font-bold hover:underline"
-                                href="home.html">Log in</a>
+                                href="Login.html?mode=login">Log in</a>
                         </p>
                     </div>
                 </div>
@@ -187,6 +232,201 @@
             </footer>
         </div>
     </div>
+       <script>
+           const API_BASE_URL = 'http://localhost:5000/api';
+           let selectedRole = 'Mother';
+
+           function setAuthMode(mode) {
+               const signupModeBtn = document.getElementById('signupModeBtn');
+               const loginModeBtn = document.getElementById('loginModeBtn');
+               const roleSection = document.getElementById('roleSection');
+               const signupForm = document.getElementById('signupForm');
+               const loginForm = document.getElementById('loginForm');
+               const authTitle = document.getElementById('authTitle');
+               const authSubtitle = document.getElementById('authSubtitle');
+
+               const isLoginMode = mode === 'login';
+
+               signupForm.classList.toggle('hidden', isLoginMode);
+               roleSection.classList.toggle('hidden', isLoginMode);
+               loginForm.classList.toggle('hidden', !isLoginMode);
+
+               signupModeBtn.className = isLoginMode
+                   ? 'h-10 rounded-lg text-slate-600 dark:text-slate-300 font-semibold'
+                   : 'h-10 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 font-semibold';
+               loginModeBtn.className = isLoginMode
+                   ? 'h-10 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 font-semibold'
+                   : 'h-10 rounded-lg text-slate-600 dark:text-slate-300 font-semibold';
+
+               if (isLoginMode) {
+                   authTitle.textContent = 'Welcome Back';
+                   authSubtitle.textContent = 'Log in to continue your maternal health journey.';
+               } else {
+                   authTitle.textContent = 'Create Your Account';
+                   authSubtitle.textContent = 'Join our community for better maternal health support.';
+               }
+           }
+
+           function showLoginMessage(type, message) {
+               const errorDiv = document.getElementById('loginErrorMessage');
+               const successDiv = document.getElementById('loginSuccessMessage');
+
+               if (type === 'error') {
+                   errorDiv.textContent = message;
+                   errorDiv.classList.remove('hidden');
+                   successDiv.classList.add('hidden');
+               } else {
+                   successDiv.textContent = message;
+                   successDiv.classList.remove('hidden');
+                   errorDiv.classList.add('hidden');
+               }
+           }
+
+           // Role Selection
+           function selectRole(role, buttonElement) {
+               selectedRole = role;
+           
+               // Update button styles
+               document.querySelectorAll('.flex.flex-col.items-center.justify-center[onclick*="selectRole"]').forEach(btn => {
+                   btn.classList.remove('border-primary', 'bg-primary/5');
+                   btn.classList.add('border-slate-200', 'dark:border-slate-800', 'hover:border-primary/50', 'text-slate-600', 'dark:text-slate-400');
+               });
+           
+               buttonElement.classList.remove('border-slate-200', 'dark:border-slate-800', 'hover:border-primary/50', 'text-slate-600', 'dark:text-slate-400');
+               buttonElement.classList.add('border-primary', 'bg-primary/5', 'text-slate-900', 'dark:text-slate-100');
+           }
+
+           // Show message
+           function showMessage(type, message) {
+               const errorDiv = document.getElementById('errorMessage');
+               const successDiv = document.getElementById('successMessage');
+           
+               if (type === 'error') {
+                   errorDiv.textContent = message;
+                   errorDiv.classList.remove('hidden');
+                   successDiv.classList.add('hidden');
+               } else {
+                   successDiv.textContent = message;
+                   successDiv.classList.remove('hidden');
+                   errorDiv.classList.add('hidden');
+               }
+           }
+
+           // Handle form submission
+           async function handleSignup(event) {
+               event.preventDefault();
+           
+               if (!selectedRole) {
+                   showMessage('error', 'Please select your role first');
+                   return;
+               }
+           
+               const fullName = document.getElementById('fullName').value;
+               const email = document.getElementById('email').value;
+               const password = document.getElementById('password').value;
+               const terms = document.getElementById('terms').checked;
+           
+               if (!terms) {
+                   showMessage('error', 'Please accept the Terms of Service and Privacy Policy');
+                   return;
+               }
+           
+               const submitBtn = document.getElementById('submitBtn');
+               submitBtn.disabled = true;
+               submitBtn.textContent = 'Creating Account...';
+           
+               try {
+                   const response = await fetch(`${API_BASE_URL}/auth/register`, {
+                       method: 'POST',
+                       headers: {
+                           'Content-Type': 'application/json'
+                       },
+                       body: JSON.stringify({
+                           fullName,
+                           email,
+                           password,
+                           role: selectedRole
+                       })
+                   });
+               
+                   const data = await response.json();
+               
+                   if (response.ok) {
+                       showMessage('success', 'Account created successfully! Redirecting...');
+                   
+                       // Store user data in localStorage
+                       const userData = {
+                           fullName,
+                           email,
+                           role: selectedRole,
+                           createdAt: new Date().toISOString()
+                       };
+                       localStorage.setItem('userData', JSON.stringify(userData));
+                   
+                       // Redirect to home after 2 seconds
+                       setTimeout(() => {
+                           window.location.href = 'home.html';
+                       }, 2000);
+                   } else {
+                       showMessage('error', data.error || 'Registration failed. Email may already exist.');
+                       submitBtn.disabled = false;
+                       submitBtn.textContent = 'Create Account';
+                   }
+               } catch (error) {
+                   console.error('Error:', error);
+                   showMessage('error', 'Server error. Please make sure backend is running on http://localhost:5000');
+                   submitBtn.disabled = false;
+                   submitBtn.textContent = 'Create Account';
+               }
+           }
+
+           async function handleLogin(event) {
+               event.preventDefault();
+
+               const email = document.getElementById('loginEmail').value;
+               const password = document.getElementById('loginPassword').value;
+               const loginSubmitBtn = document.getElementById('loginSubmitBtn');
+
+               loginSubmitBtn.disabled = true;
+               loginSubmitBtn.textContent = 'Logging In...';
+
+               try {
+                   const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                       method: 'POST',
+                       headers: {
+                           'Content-Type': 'application/json'
+                       },
+                       body: JSON.stringify({ email, password })
+                   });
+
+                   const data = await response.json();
+
+                   if (response.ok) {
+                       localStorage.setItem('userData', JSON.stringify({
+                           ...data.user,
+                           createdAt: new Date().toISOString()
+                       }));
+                       showLoginMessage('success', 'Login successful! Redirecting...');
+                       setTimeout(() => {
+                           window.location.href = 'home.html';
+                       }, 1000);
+                   } else {
+                       showLoginMessage('error', data.error || 'Invalid email or password');
+                       loginSubmitBtn.disabled = false;
+                       loginSubmitBtn.textContent = 'Log In';
+                   }
+               } catch (error) {
+                   console.error('Error:', error);
+                   showLoginMessage('error', 'Server error. Please make sure backend is running on http://localhost:5000');
+                   loginSubmitBtn.disabled = false;
+                   loginSubmitBtn.textContent = 'Log In';
+               }
+           }
+
+           const initialMode = new URLSearchParams(window.location.search).get('mode');
+           setAuthMode(initialMode === 'login' ? 'login' : 'signup');
+       </script>
+
 </body>
 
 </html>

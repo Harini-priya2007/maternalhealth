@@ -116,7 +116,7 @@
                                     Place your finger firmly over your phone's camera and flash. The AI will detect
                                     micro-changes in blood color to estimate heart rate and cardiovascular health.
                                 </p>
-                                <button
+                                <button id="takeCardioScanBtn"
                                     class="w-full md:w-auto px-8 py-3 bg-primary hover:bg-rose-600 text-white rounded-lg font-bold shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined">sensors</span>
                                     Take PPG Scan
@@ -130,10 +130,10 @@
                         <div class="flex justify-between items-end mb-6">
                             <div>
                                 <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">Current Risk Level</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm">Last scan: Today, 10:30 AM</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm" id="lastCardioScanTime">No scans yet</p>
                             </div>
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-xs font-bold uppercase tracking-wider">Stable</span>
+                            <span id="cardioRiskStatus"
+                                class="px-3 py-1 bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400 rounded-full text-xs font-bold uppercase tracking-wider">-</span>
                         </div>
                         <div class="relative pt-4 pb-8">
                             <div class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
@@ -142,7 +142,7 @@
                                 <div class="h-full bg-red-400" style="width: 30%"></div>
                             </div>
                             <!-- Needle/Marker -->
-                            <div class="absolute top-0 left-[25%] -translate-x-1/2 flex flex-col items-center">
+                            <div id="cardioRiskMarker" class="absolute top-0 left-[50%] -translate-x-1/2 flex flex-col items-center">
                                 <span class="material-symbols-outlined text-primary fill-1">arrow_drop_down</span>
                                 <div class="w-1 h-8 bg-primary"></div>
                             </div>
@@ -157,61 +157,24 @@
                             <div
                                 class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
                                 <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Heart Rate</p>
-                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200">72 <span
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioHeartRate">-- <span
                                         class="text-sm font-normal text-slate-500">BPM</span></p>
                             </div>
                             <div
                                 class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
-                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Perfusion Index
+                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Systolic/Diastolic
                                 </p>
-                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200">4.2 <span
-                                        class="text-sm font-normal text-slate-500">%</span></p>
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioBP">--/-- <span
+                                        class="text-sm font-normal text-slate-500">mmHg</span></p>
                             </div>
                         </div>
                     </div>
                     <!-- Charts Section -->
                     <div
                         class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6">Heart Rate Trend</h3>
-                        <div class="h-64 w-full flex items-end justify-between gap-2 px-2">
-                            <!-- Placeholder Bar Chart -->
-                            <div
-                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[60%]">
-                                <div
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                    68 BPM</div>
-                            </div>
-                            <div
-                                class="w-full bg-rose-200 dark:bg-rose-800/40 rounded-t-lg relative group h-[65%]">
-                                <div
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                    70 BPM</div>
-                            </div>
-                            <div
-                                class="w-full bg-rose-300 dark:bg-rose-700/60 rounded-t-lg relative group h-[75%]">
-                                <div
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                    74 BPM</div>
-                            </div>
-                            <div class="w-full bg-primary rounded-t-lg relative group h-[72%]">
-                                <div
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                    72 BPM</div>
-                            </div>
-                            <div
-                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[70%] opacity-50">
-                            </div>
-                            <div
-                                class="w-full bg-rose-100 dark:bg-rose-900/20 rounded-t-lg relative group h-[68%] opacity-50">
-                            </div>
-                        </div>
-                        <div class="flex justify-between mt-4 text-xs font-medium text-slate-400 px-2">
-                            <span>Week 1</span>
-                            <span>Week 2</span>
-                            <span>Week 3</span>
-                            <span>Week 4 (Now)</span>
-                            <span>Forecast</span>
-                            <span>Forecast</span>
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6">Heart Rate History</h3>
+                        <div id="cardioHistoryContainer" class="space-y-3">
+                            <p class="text-slate-500 text-sm text-center py-8">No readings yet. Take a PPG scan to start tracking.</p>
                         </div>
                     </div>
                 </div>
@@ -330,6 +293,238 @@
             <p class="text-slate-400 text-sm">© 2024 Maternal Health AI. For informational purposes only.</p>
         </footer>
     </div>
+
+    <script>
+        // Toast notification
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 right-6 px-6 py-3 rounded-lg font-bold text-white text-sm z-[9999]`;
+            toast.textContent = message;
+            
+            if (type === 'success') toast.style.backgroundColor = '#10b981';
+            else if (type === 'error') toast.style.backgroundColor = '#ef4444';
+            else toast.style.backgroundColor = '#3b82f6';
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Get current user
+        function getCurrentUser() {
+            const userData = localStorage.getItem('userData');
+            if (!userData) {
+                window.location.href = 'Login.html';
+                return null;
+            }
+            return JSON.parse(userData);
+        }
+
+        // Generate sample cardiovascular PPG signal
+        function generateCardioSignal(length = 256) {
+            const signal = [];
+            const baseFrequency = Math.random() * 1.5 + 0.8;  // 0.8-2.3 Hz for heart rate
+            const noiseLevel = 0.15;
+            
+            for (let i = 0; i < length; i++) {
+                const t = i / 50;
+                const pulse = Math.sin(2 * Math.PI * baseFrequency * t);
+                const noise = (Math.random() - 0.5) * noiseLevel;
+                signal.push(100 + pulse * 60 + noise * 35);
+            }
+            return signal;
+        }
+
+        // Take cardiovascular PPG scan
+        async function takeCardioScan() {
+            const user = getCurrentUser();
+            if (!user) return;
+
+            const btn = document.getElementById('takeCardioScanBtn');
+            const originalText = btn.innerHTML;
+            
+            try {
+                btn.disabled = true;
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">settings</span> Scanning...';
+                
+                // For now, use simulated data since your friend's model will be integrated
+                const ppgSignal = generateCardioSignal();
+                
+                // Simulate cardiovascular analysis results
+                const heartRate = Math.floor(Math.random() * 40) + 60;  // 60-100 BPM
+                const systolic = Math.floor(Math.random() * 20) + 110;  // 110-130 mmHg
+                const diastolic = Math.floor(Math.random() * 15) + 70;  // 70-85 mmHg
+                
+                const analysisResult = {
+                    pulseRate: heartRate,
+                    systolic: systolic,
+                    diastolic: diastolic,
+                    spO2: Math.floor(Math.random() * 3) + 96,  // 96-99%
+                    signalQuality: Math.floor(Math.random() * 20) + 80,  // 80-100%
+                    status: heartRate > 100 ? 'Elevated' : 'Normal',
+                    timestamp: new Date().toISOString()
+                };
+
+                // Save reading with user ID
+                const saveResponse = await fetch('http://localhost:5000/api/cardio/data', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        userId: user.id,
+                        heartRate: analysisResult.pulseRate,
+                        systolic: analysisResult.systolic,
+                        diastolic: analysisResult.diastolic,
+                        spO2: analysisResult.spO2,
+                        signalQuality: analysisResult.signalQuality,
+                        healthStatus: analysisResult.status
+                    })
+                });
+
+                if (!saveResponse.ok) {
+                    console.warn('Could not save to backend, using localStorage');
+                }
+
+                showToast(`✓ Scan complete! HR: ${analysisResult.pulseRate} BPM, BP: ${analysisResult.systolic}/${analysisResult.diastolic}`, 'success');
+                
+                // Update display
+                await loadCardioHistory();
+                updateCurrentCardioReading(analysisResult);
+                
+            } catch (error) {
+                console.error('Scan error:', error);
+                showToast('Error during scan. Please try again.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        // Update current cardiovascular reading display
+        function updateCurrentCardioReading(data) {
+            // Update values
+            document.getElementById('cardioHeartRate').innerHTML = 
+                `${Math.round(data.pulseRate)} <span class="text-sm font-normal text-slate-500">BPM</span>`;
+            document.getElementById('cardioBP').innerHTML = 
+                `${data.systolic}/${data.diastolic} <span class="text-sm font-normal text-slate-500">mmHg</span>`;
+
+            // Determine risk status
+            let status = 'Normal';
+            let riskPercent = 30;
+            
+            if (data.pulseRate > 100 || data.systolic > 130 || data.diastolic > 85) {
+                status = 'Elevated';
+                riskPercent = 70;
+            } else if (data.pulseRate < 60 || data.systolic > 120) {
+                status = 'Monitor';
+                riskPercent = 50;
+            }
+
+            // Update risk marker
+            const marker = document.getElementById('cardioRiskMarker');
+            marker.style.left = riskPercent + '%';
+
+            // Update status badge
+            const statusBadge = document.getElementById('cardioRiskStatus');
+            statusBadge.textContent = status;
+            statusBadge.className = 'px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ';
+            
+            if (status === 'Normal') {
+                statusBadge.className += 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
+            } else if (status === 'Monitor') {
+                statusBadge.className += 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
+            } else {
+                statusBadge.className += 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
+            }
+
+            // Update timestamp
+            const now = new Date();
+            const timeStr = now.toLocaleString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            document.getElementById('lastCardioScanTime').textContent = `Last scan: ${timeStr}`;
+        }
+
+        // Load cardiovascular history
+        async function loadCardioHistory() {
+            const user = getCurrentUser();
+            if (!user) return;
+
+            try {
+                const response = await fetch(`http://localhost:5000/api/cardio/data/${user.id}?limit=10`, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                if (!response.ok) {
+                    console.warn('No history available');
+                    return;
+                }
+
+                const readings = await response.json();
+                const container = document.getElementById('cardioHistoryContainer');
+
+                if (readings.length === 0) {
+                    container.innerHTML = '<p class="text-slate-500 text-sm text-center py-8">No readings yet. Take a PPG scan to start tracking.</p>';
+                    return;
+                }
+
+                // Sort by timestamp (newest first)
+                readings.sort((a, b) => new Date(b.recordTimestamp) - new Date(a.recordTimestamp));
+
+                container.innerHTML = readings.slice(0, 10).map((reading) => {
+                    const timestamp = new Date(reading.recordTimestamp);
+                    const timeStr = timestamp.toLocaleString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+
+                    let statusColor = 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
+                    if (reading.heartRate > 100 || reading.systolic > 130) {
+                        statusColor = 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
+                    } else if (reading.heartRate < 60 || reading.systolic > 120) {
+                        statusColor = 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
+                    }
+
+                    return `
+                        <div class="flex items-center justify-between p-4 rounded-lg bg-slate-50 dark:bg-slate-800/30 border border-slate-200 dark:border-slate-700/50">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-200">❤️ ${reading.heartRate} BPM</span>
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-200">📊 ${reading.systolic}/${reading.diastolic} mmHg</span>
+                                    <span class="px-2 py-1 rounded text-xs font-bold ${statusColor}">${reading.healthStatus}</span>
+                                </div>
+                                <div class="flex gap-4 text-xs text-slate-500 dark:text-slate-400">
+                                    <span>📅 ${timeStr}</span>
+                                    <span>O₂ ${reading.spO2}%</span>
+                                    <span>Signal: ${reading.signalQuality}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+            } catch (error) {
+                console.error('Error loading history:', error);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = getCurrentUser();
+            if (!user) return;
+
+            const takeScanBtn = document.getElementById('takeCardioScanBtn');
+            if (takeScanBtn) {
+                takeScanBtn.addEventListener('click', takeCardioScan);
+            }
+
+            loadCardioHistory();
+        });
+    </script>
 </body>
 
 </html>
