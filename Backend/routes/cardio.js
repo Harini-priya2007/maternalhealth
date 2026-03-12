@@ -134,7 +134,3 @@ router.post('/data', (req, res) => {
 });
 
 module.exports = router;
-  );
-});
-
-module.exports = router;

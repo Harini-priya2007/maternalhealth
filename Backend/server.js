@@ -11,6 +11,7 @@ const cardioRoutes = require('./routes/cardio');
 const jaundiceRoutes = require('./routes/jaundice');
 const mentalhealthRoutes = require('./routes/mentalhealth');
 const landingRoutes = require('./routes/landing');
+const genaiRoutes = require('./routes/genai');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -28,6 +29,7 @@ app.use('/api/cardio', cardioRoutes);
 app.use('/api/jaundice', jaundiceRoutes);
 app.use('/api/mentalhealth', mentalhealthRoutes);
 app.use('/api/landing', landingRoutes);
+app.use('/api/genai', genaiRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -51,5 +53,6 @@ app.listen(PORT, () => {
   console.log('  POST   /api/jaundice/data - Save jaundice data');
   console.log('  GET    /api/mentalhealth/data/:userId - Get mental health data');
   console.log('  POST   /api/mentalhealth/data - Save mental health data');
+  console.log('  POST   /api/genai/chat - Ask page-aware GenAI assistant');
   console.log('  GET    /api/landing/info - Get landing page info\n');
 });
