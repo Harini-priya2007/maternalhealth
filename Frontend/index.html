@@ -40,37 +40,40 @@
         <div class="layout-container flex h-full grow flex-col">
             <!-- Top Navigation Bar -->
             <header
-                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
-                <a href="Landing page.html" class="flex items-center gap-3">
-                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
-                        <span class="material-symbols-outlined">health_and_safety</span>
+                class="whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+                <div class="max-w-6xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between w-full">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                            <span class="material-symbols-outlined">health_and_safety</span>
+                        </div>
+                        <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">
+                            Pink
+                            Maternal</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-1">
+                        <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                            href="index.html">
+                            <span class="material-symbols-outlined text-sm">home</span>
+                            <span>Home</span>
+                        </a>
+                        <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            href="Login.html">
+                            <span class="material-symbols-outlined text-sm">login</span>
+                            <span>Sign In</span>
+                        </a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <button onclick="window.location.href='Login.html'"
+                            class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:brightness-110 transition-all">
+                            Get Started
+                        </button>
                     </div>
-                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
-                        Maternal</h2>
-                </a>
-                <nav class="hidden md:flex items-center gap-1">
-                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
-                        href="Landing page.html">
-                        <span class="material-symbols-outlined text-sm">home</span>
-                        <span>Home</span>
-                    </a>
-                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                        href="Login.html">
-                        <span class="material-symbols-outlined text-sm">login</span>
-                        <span>Sign In</span>
-                    </a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <button onclick="window.location.href='Login.html'"
-                        class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:brightness-110 transition-all">
-                        Get Started
-                    </button>
                 </div>
             </header>
             <main class="flex-1">
                 <!-- Hero Section -->
-                <section class="px-6 md:px-20 lg:px-40 py-12 md:py-20 bg-gradient-to-br from-primary/5 to-transparent">
-                    <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <section class="w-full bg-gradient-to-br from-primary/5 to-transparent py-12 md:py-20">
+                    <div class="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="flex flex-col gap-8">
                             <div class="flex flex-col gap-4">
                                 <span class="text-primary font-bold tracking-widest text-sm uppercase">Early Detection
@@ -107,8 +110,8 @@
                     </div>
                 </section>
                 <!-- 1. Platform Overview -->
-                <section class="px-6 md:px-20 lg:px-40 py-20 bg-white dark:bg-slate-900/50" id="solutions">
-                    <div class="max-w-[1200px] mx-auto">
+                <section class="w-full bg-white dark:bg-slate-900/50 py-20" id="solutions">
+                    <div class="max-w-6xl mx-auto px-6 md:px-10">
                         <div class="flex flex-col gap-4 mb-12">
                             <h2 class="text-3xl font-bold tracking-tight">Comprehensive Health Monitoring</h2>
                             <p class="text-slate-600 dark:text-slate-400 max-w-2xl">Targeted AI screening tools designed
@@ -161,8 +164,8 @@
                     </div>
                 </section>
                 <!-- 2. Key Benefits -->
-                <section class="px-6 md:px-20 lg:px-40 py-20 bg-background-light dark:bg-background-dark" id="benefits">
-                    <div class="max-w-[1200px] mx-auto">
+                <section class="w-full bg-background-light dark:bg-background-dark py-20" id="benefits">
+                    <div class="max-w-6xl mx-auto px-6 md:px-10">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                             <div class="flex flex-col gap-8">
                                 <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Empowering the Full Circle of
@@ -213,12 +216,12 @@
                     </div>
                 </section>
                 <!-- 3. How it Works (AI Visualization) -->
-                <section class="px-6 md:px-20 lg:px-40 py-20 bg-[#2d0f19] text-white overflow-hidden relative"
-                    id="how-it-works">
+                <section class="w-full bg-[#2d0f19] text-white overflow-hidden relative py-20" id="how-it-works">
                     <div
                         class="absolute inset-0 opacity-10 bg-[radial-gradient(#fb7185_1px,transparent_1px)] [background-size:20px_20px]">
                     </div>
-                    <div class="max-w-[1000px] mx-auto relative z-10 text-center flex flex-col items-center gap-12">
+                    <div
+                        class="max-w-6xl mx-auto px-6 md:px-10 relative z-10 text-center flex flex-col items-center gap-12">
                         <div class="flex flex-col gap-4">
                             <h2 class="text-4xl font-bold">The Science Behind the Shield</h2>
                             <p class="text-slate-300 max-w-xl mx-auto">Our multi-layered AI architecture analyzes
@@ -272,9 +275,9 @@
                     </div>
                 </section>
                 <!-- 4. Final CTA -->
-                <section class="px-6 md:px-20 lg:px-40 py-24 bg-white dark:bg-slate-900">
+                <section class="w-full bg-white dark:bg-slate-900 py-24">
                     <div
-                        class="max-w-[1200px] mx-auto bg-primary/10 rounded-[2rem] p-8 md:p-16 flex flex-col items-center text-center gap-8 border border-primary/20">
+                        class="max-w-6xl mx-auto px-6 md:px-10 bg-primary/10 rounded-[2rem] p-8 md:p-16 flex flex-col items-center text-center gap-8 border border-primary/20">
                         <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100 max-w-3xl">Ready
                             to ensure a safer health journey?</h2>
                         <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl">Join thousands of mothers and
@@ -290,54 +293,7 @@
                     </div>
                 </section>
             </main>
-            <!-- Footer -->
-            <footer
-                class="px-6 md:px-20 lg:px-40 py-12 border-t border-primary/10 bg-background-light dark:bg-background-dark">
-                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <div class="flex flex-col gap-4">
-                        <div class="flex items-center gap-2 text-slate-900 dark:text-slate-100">
-                            <span class="material-symbols-outlined text-primary">auto_awesome</span>
-                            <h2 class="text-lg font-bold">Pink Maternal</h2>
-                        </div>
-                        <p class="text-sm text-slate-500">Pioneering early detection for maternal and neonatal wellness
-                            through artificial intelligence.</p>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold">Platform</h4>
-                        <ul class="text-sm text-slate-500 flex flex-col gap-2">
-                            <li><a class="hover:text-primary" href="#">Cardiovascular Scan</a></li>
-                            <li><a class="hover:text-primary" href="#">Anemia Screening</a></li>
-                            <li><a class="hover:text-primary" href="#">Neonatal Jaundice</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold">Company</h4>
-                        <ul class="text-sm text-slate-500 flex flex-col gap-2">
-                            <li><a class="hover:text-primary" href="#">About Us</a></li>
-                            <li><a class="hover:text-primary" href="#">Research</a></li>
-                            <li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold">Connect</h4>
-                        <div class="flex gap-4">
-                            <div
-                                class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
-                                <span class="material-symbols-outlined text-xl">share</span>
-                            </div>
-                            <div
-                                class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
-                                <span class="material-symbols-outlined text-xl">mail</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400">
-                    © 2024 Pink Maternal. For informational purposes only. Consult with a medical professional for
-                    diagnosis.
-                </div>
-            </footer>
+
         </div>
     </div>
     <script src="genai-widget.js"></script>

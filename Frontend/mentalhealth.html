@@ -39,52 +39,54 @@
     <div class="layout-container flex h-full grow flex-col">
         <!-- Top Navigation Bar - Matching SCREEN_21 exactly -->
         <header
-            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
-            <a href="home.html" class="flex items-center gap-3">
-                <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
-                    <span class="material-symbols-outlined">health_and_safety</span>
-                </div>
-                <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
-                    Maternal</h2>
-            </a>
-            <nav class="hidden md:flex items-center gap-1">
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="home.html">
-                    <span class="material-symbols-outlined text-sm">home</span>
-                    <span>Home</span>
+            class="whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+            <div class="max-w-6xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between w-full">
+                <a href="home.html" class="flex items-center gap-3">
+                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                        Maternal</h2>
                 </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="anemia.html">
-                    <span class="material-symbols-outlined text-sm">bloodtype</span>
-                    <span>Anemia</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="jaundice.html">
-                    <span class="material-symbols-outlined text-sm">visibility</span>
-                    <span>Jaundice</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="cardio.html">
-                    <span class="material-symbols-outlined text-sm">monitor_heart</span>
-                    <span>Cardiovascular</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
-                    href="mentalhealth.html">
-                    <span class="material-symbols-outlined text-sm">self_improvement</span>
-                    <span>Mental Health</span>
-                </a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <button
-                    class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
-             </div>
-                </button>
-                <div class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                <nav class="hidden md:flex items-center gap-1">
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="home.html">
+                        <span class="material-symbols-outlined text-sm">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="anemia.html">
+                        <span class="material-symbols-outlined text-sm">bloodtype</span>
+                        <span>Anemia</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="jaundice.html">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        <span>Jaundice</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="cardio.html">
+                        <span class="material-symbols-outlined text-sm">monitor_heart</span>
+                        <span>Cardiovascular</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                        href="mentalhealth.html">
+                        <span class="material-symbols-outlined text-sm">self_improvement</span>
+                        <span>Mental Health</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button id="notificationBtn"
+                        class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div id="profileAvatarBtn" class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                    </div>
                 </div>
             </div>
         </header>
-        <main class="max-w-6xl mx-auto px-6 py-10 w-full">
+        <main class="max-w-6xl mx-auto px-6 md:px-10 py-10 w-full">
             <!-- Header Section -->
             <div class="mb-10">
                 <div class="flex items-center gap-2 text-primary mb-2">
@@ -133,8 +135,7 @@
                             </button>
                             <button type="button" data-mood="Calm"
                                 class="mood-btn flex flex-col items-center gap-3 rounded-xl border border-rose-100 bg-white dark:bg-slate-800 p-6 transition-all hover:border-primary/50">
-                                <span
-                                    class="material-symbols-outlined text-4xl text-rose-300">self_improvement</span>
+                                <span class="material-symbols-outlined text-4xl text-rose-300">self_improvement</span>
                                 <div class="text-center">
                                     <h3 class="text-slate-800 dark:text-slate-200 font-bold text-sm">Calm</h3>
                                     <p class="text-slate-400 text-[10px]">Peaceful &amp; Balanced</p>
@@ -157,23 +158,23 @@
                                 <p class="text-slate-700 dark:text-slate-300 font-semibold text-sm">1. How have you been
                                     sleeping lately?</p>
                                 <div class="flex flex-wrap gap-3">
-                                        <button type="button" data-value="Very Well"
-                                            class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Very
-                                            Well</button>
-                                        <button type="button" data-value="Good"
-                                            class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Good</button>
-                                        <button type="button" data-value="Disturbed"
-                                            class="sleepBtn px-5 py-2 rounded-lg border border-primary text-xs bg-primary text-white font-bold shadow-md">Disturbed</button>
-                                        <button type="button" data-value="Insomnia"
-                                            class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Insomnia</button>
+                                    <button type="button" data-value="Very Well"
+                                        class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Very
+                                        Well</button>
+                                    <button type="button" data-value="Good"
+                                        class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Good</button>
+                                    <button type="button" data-value="Disturbed"
+                                        class="sleepBtn px-5 py-2 rounded-lg border border-primary text-xs bg-primary text-white font-bold shadow-md">Disturbed</button>
+                                    <button type="button" data-value="Insomnia"
+                                        class="sleepBtn px-5 py-2 rounded-lg border border-rose-200 text-xs bg-white text-slate-600 hover:bg-rose-50 transition-colors">Insomnia</button>
                                 </div>
                             </div>
                             <div class="space-y-4">
                                 <p class="text-slate-700 dark:text-slate-300 font-semibold text-sm">2. Have you felt
                                     overwhelmed in the last 24 hours?</p>
-                                    <input id="overwhelmedSlider"
-                                        class="w-full h-2 bg-rose-100 rounded-lg appearance-none cursor-pointer accent-primary"
-                                        max="10" min="0" type="range" value="7" />
+                                <input id="overwhelmedSlider"
+                                    class="w-full h-2 bg-rose-100 rounded-lg appearance-none cursor-pointer accent-primary"
+                                    max="10" min="0" type="range" value="3" />
                                 <div
                                     class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                     <span>Not at all</span>
@@ -188,19 +189,19 @@
                                     <label
                                         class="flex items-center gap-3 p-4 rounded-xl border border-rose-100 bg-rose-50/30 cursor-pointer hover:border-primary transition-colors">
                                         <input class="text-primary focus:ring-primary h-4 w-4" name="bonding"
-                                                id="bondingVeryStrong" type="radio" />
+                                            id="bondingVeryStrong" type="radio" />
                                         <span class="text-sm font-medium">Very Strong</span>
                                     </label>
                                     <label
                                         class="flex items-center gap-3 p-4 rounded-xl border border-primary bg-rose-100 cursor-pointer transition-colors">
                                         <input checked="" class="text-primary focus:ring-primary h-4 w-4" name="bonding"
-                                                id="bondingNormal" type="radio" />
+                                            id="bondingNormal" type="radio" />
                                         <span class="text-sm font-bold">Normal</span>
                                     </label>
                                     <label
                                         class="flex items-center gap-3 p-4 rounded-xl border border-rose-100 bg-rose-50/30 cursor-pointer hover:border-primary transition-colors">
                                         <input class="text-primary focus:ring-primary h-4 w-4" name="bonding"
-                                                id="bondingDistant" type="radio" />
+                                            id="bondingDistant" type="radio" />
                                         <span class="text-sm font-medium">Distant</span>
                                     </label>
                                 </div>
@@ -209,20 +210,20 @@
                                 <p class="text-slate-700 dark:text-slate-300 font-semibold text-sm">4. Do you have a
                                     supportive person to talk to today?</p>
                                 <div class="flex gap-4">
-                                        <button type="button" data-value="Yes" id="supportYesBtn"
-                                            class="supportBtn flex-1 py-3 rounded-xl border border-primary bg-primary text-white font-bold shadow-lg shadow-primary/20">Yes</button>
-                                        <button type="button" data-value="No" id="supportNoBtn"
-                                            class="supportBtn flex-1 py-3 rounded-xl border border-rose-200 bg-white text-slate-600 font-medium">No</button>
+                                    <button type="button" data-value="Yes" id="supportYesBtn"
+                                        class="supportBtn flex-1 py-3 rounded-xl border border-primary bg-primary text-white font-bold shadow-lg shadow-primary/20">Yes</button>
+                                    <button type="button" data-value="No" id="supportNoBtn"
+                                        class="supportBtn flex-1 py-3 rounded-xl border border-rose-200 bg-white text-slate-600 font-medium">No</button>
                                 </div>
                             </div>
-                                <button type="submit" id="submitAssessmentBtn"
-                                    class="w-full bg-primary hover:bg-rose-600 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all mt-4">
-                                    Submit Assessment
-                                </button>
-                                <button type="button" id="historyMentalBtn"
-                                    class="w-full border-2 border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary/10 transition-colors">
-                                    History
-                                </button>
+                            <button type="submit" id="submitAssessmentBtn"
+                                class="w-full bg-primary hover:bg-rose-600 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all mt-4">
+                                Submit Assessment
+                            </button>
+                            <button type="button" id="historyMentalBtn"
+                                class="w-full border-2 border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary/10 transition-colors">
+                                History
+                            </button>
                         </form>
                     </section>
                 </div>
@@ -239,26 +240,20 @@
                             <div class="flex justify-between items-end mb-4">
                                 <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Stress Risk
                                     Level</span>
-                                <span class="text-2xl font-black text-amber-500">Moderate</span>
+                                <span id="riskLevelText" class="text-2xl font-black text-emerald-500">Low</span>
                             </div>
                             <div class="w-full bg-slate-100 dark:bg-slate-800 h-4 rounded-full overflow-hidden flex">
                                 <!-- Scale: Pink to Orange to Red -->
-                                <div class="h-full bg-rose-400" style="width: 33%"></div>
-                                <div class="h-full bg-amber-500" style="width: 33%"></div>
-                                <div class="h-full bg-red-500" style="width: 34%"></div>
-                            </div>
-                            <!-- Needle/Marker for Moderate -->
-                            <div class="flex justify-center -mt-1">
-                                <span
-                                    class="material-symbols-outlined text-slate-800 dark:text-white">arrow_drop_up</span>
+                                <div id="riskBarLow" class="h-full bg-emerald-500" style="width: 33%"></div>
+                                <div id="riskBarMod" class="h-full bg-slate-200 dark:bg-slate-800" style="width: 33%">
+                                </div>
+                                <div id="riskBarHigh" class="h-full bg-slate-200 dark:bg-slate-800" style="width: 34%">
+                                </div>
                             </div>
                         </div>
-                        <div
-                            class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-xl border border-rose-100 italic">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                "Your responses suggest you might be experiencing some fatigue and elevated stress. This
-                                is very common in your current stage. Taking a 15-minute break today could be
-                                beneficial."
+                        <div class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-xl border border-rose-100 italic">
+                            <p id="aiAnalysisText" class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Submit your assessment to see your personalized AI analysis here.
                             </p>
                         </div>
                     </section>
@@ -266,18 +261,20 @@
                     <section class="space-y-4">
                         <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 px-1">Personalized
                             Recommendations</h3>
-                        <div
-                            class="group bg-white dark:bg-slate-900/50 rounded-xl p-5 border border-rose-100 dark:border-rose-900/20 shadow-sm flex items-center gap-4 hover:border-primary transition-all cursor-pointer">
+                        <div id="mentalRecommendationsContainer" class="space-y-4">
                             <div
-                                class="size-12 bg-rose-100 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                                <span class="material-symbols-outlined">filter_drama</span>
+                                class="group bg-white dark:bg-slate-900/50 rounded-xl p-5 border border-rose-100 dark:border-rose-900/20 shadow-sm flex items-center gap-4 hover:border-primary transition-all cursor-pointer">
+                                <div
+                                    class="size-12 bg-rose-100 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                    <span class="material-symbols-outlined">filter_drama</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Guided Meditation</h4>
+                                    <p class="text-xs text-slate-500">5 mins · Stress Relief</p>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
                             </div>
-                            <div class="flex-1">
-                                <h4 class="font-bold text-slate-800 dark:text-slate-200">Guided Meditation</h4>
-                                <p class="text-xs text-slate-500">5 mins · Stress Relief</p>
-                            </div>
-                            <span
-                                class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
                         </div>
                         <div
                             class="group bg-white dark:bg-slate-900/50 rounded-xl p-5 border border-rose-100 dark:border-rose-900/20 shadow-sm flex items-center gap-4 hover:border-primary transition-all cursor-pointer">
@@ -317,37 +314,20 @@
                 </div>
             </div>
         </main>
-        <!-- Footer -->
-        <footer
-            class="mt-20 border-t border-rose-100 dark:border-rose-900/20 py-10 px-6 md:px-20 bg-white dark:bg-background-dark">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary">verified_user</span>
-                    <p class="text-slate-500 text-sm font-medium italic">Clinically reviewed for maternal mental health
-                        standards.</p>
-                </div>
-                <div class="flex gap-8">
-                    <a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Privacy
-                        Policy</a>
-                    <a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Crisis
-                        Hotline</a>
-                    <a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Help
-                        Center</a>
-                </div>
-            </div>
-            <p class="text-center text-slate-400 text-[10px] mt-8">© 2024 Maternal Health AI. For informational purposes
-                only.</p>
-        </footer>
+
     </div>
 
-    <div id="mentalHealthHistoryModal" class="hidden fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden flex flex-col">
+    <div id="mentalHealthHistoryModal"
+        class="hidden fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4">
+        <div
+            class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden flex flex-col">
             <div class="flex items-center justify-between px-8 py-6 border-b border-rose-100 dark:border-rose-900/20">
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Mental Health History</h2>
                     <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Your past assessments with timestamps</p>
                 </div>
-                <button id="closeHistoryMentalBtn" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+                <button id="closeHistoryMentalBtn"
+                    class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
                     <span class="material-symbols-outlined text-2xl">close</span>
                 </button>
             </div>
@@ -355,7 +335,8 @@
                 <p class="text-slate-500 text-center py-8">No assessments yet. Submit an assessment to see records.</p>
             </div>
             <div class="px-8 py-4 border-t border-rose-100 dark:border-rose-900/20">
-                <button id="clearMentalHistoryBtn" class="w-full px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-bold rounded-lg hover:bg-red-100 transition-colors">
+                <button id="clearMentalHistoryBtn"
+                    class="w-full px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-bold rounded-lg hover:bg-red-100 transition-colors">
                     Clear All History
                 </button>
             </div>
@@ -363,6 +344,7 @@
     </div>
 
     <script src="mentalhealth.js"></script>
+    <script src="navigation-system.js"></script>
     <script src="genai-widget.js"></script>
 </body>
 

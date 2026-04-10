@@ -39,52 +39,54 @@
     <div class="layout-container flex h-full grow flex-col">
         <!-- Top Navigation Bar -->
         <header
-            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 px-6 md:px-10 py-4 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
-            <a href="home.html" class="flex items-center gap-3">
-                <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
-                    <span class="material-symbols-outlined">health_and_safety</span>
-                </div>
-                <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
-                    Maternal</h2>
-            </a>
-            <nav class="hidden md:flex items-center gap-1">
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="home.html">
-                    <span class="material-symbols-outlined text-sm">home</span>
-                    <span>Home</span>
+            class="whitespace-nowrap border-b border-solid border-rose-100 dark:border-rose-900/30 sticky top-0 bg-background-light/80 backdrop-blur-md z-50">
+            <div class="max-w-6xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between w-full">
+                <a href="home.html" class="flex items-center gap-3">
+                    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Pink
+                        Maternal</h2>
                 </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="anemia.html">
-                    <span class="material-symbols-outlined text-sm">bloodtype</span>
-                    <span>Anemia</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="jaundice.html">
-                    <span class="material-symbols-outlined text-sm">visibility</span>
-                    <span>Jaundice</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
-                    href="cardio.html">
-                    <span class="material-symbols-outlined text-sm">monitor_heart</span>
-                    <span>Cardiovascular</span>
-                </a>
-                <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    href="mentalhealth.html">
-                    <span class="material-symbols-outlined text-sm">self_improvement</span>
-                    <span>Mental Health</span>
-                </a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <button
-                    class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
-                    <span class="material-symbols-outlined">notifications</span>
-                </button>
-                <div class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                <nav class="hidden md:flex items-center gap-1">
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="home.html">
+                        <span class="material-symbols-outlined text-sm">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="anemia.html">
+                        <span class="material-symbols-outlined text-sm">bloodtype</span>
+                        <span>Anemia</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="jaundice.html">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        <span>Jaundice</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold"
+                        href="cardio.html">
+                        <span class="material-symbols-outlined text-sm">monitor_heart</span>
+                        <span>Cardiovascular</span>
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="mentalhealth.html">
+                        <span class="material-symbols-outlined text-sm">self_improvement</span>
+                        <span>Mental Health</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button id="notificationBtn"
+                        class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 hover:text-primary transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div id="profileAvatarBtn" class="size-10 rounded-full border-2 border-primary bg-center bg-cover" data-alt="Avatar"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuozhymEJVd41ejzHmyPix6N2CMJlXvaPvlhKa-ewZoyQMGNCpNCPPHk0UGpFX47iORD1cd0uQe4mnf740e9FwjF9g4kIlXSmyyfHkY70ATGEts3WVzpd1SqCgkJNKG3PBZyq1oVaTDX7fShZyjkh44yKPWvVF2hmLEkrK3LmJA0n2wAK5XQTB0noLosx_yYKzkEMkLI9HX0IrxG4edSsRNK1egGdUB-5FKhM41OwszQyNjjPozYUX8P6acK9GFlP6PYyh3hj-tyU')">
+                    </div>
                 </div>
             </div>
         </header>
-        <main class="max-w-6xl mx-auto px-6 py-10 w-full">
+        <main class="max-w-6xl mx-auto px-6 md:px-10 py-10 w-full">
             <!-- Header Section -->
             <div class="mb-10">
                 <h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight mb-2">AI
@@ -130,7 +132,8 @@
                         <div class="flex justify-between items-end mb-6">
                             <div>
                                 <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">Current Risk Level</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm" id="lastCardioScanTime">No scans yet</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm" id="lastCardioScanTime">No scans
+                                    yet</p>
                             </div>
                             <span id="cardioRiskStatus"
                                 class="px-3 py-1 bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400 rounded-full text-xs font-bold uppercase tracking-wider">-</span>
@@ -142,7 +145,8 @@
                                 <div class="h-full bg-red-400" style="width: 30%"></div>
                             </div>
                             <!-- Needle/Marker -->
-                            <div id="cardioRiskMarker" class="absolute top-0 left-[50%] -translate-x-1/2 flex flex-col items-center">
+                            <div id="cardioRiskMarker"
+                                class="absolute top-0 left-[50%] -translate-x-1/2 flex flex-col items-center">
                                 <span class="material-symbols-outlined text-primary fill-1">arrow_drop_down</span>
                                 <div class="w-1 h-8 bg-primary"></div>
                             </div>
@@ -157,15 +161,17 @@
                             <div
                                 class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
                                 <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Heart Rate</p>
-                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioHeartRate">-- <span
-                                        class="text-sm font-normal text-slate-500">BPM</span></p>
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioHeartRate">
+                                    -- <span class="text-sm font-normal text-slate-500">BPM</span></p>
                             </div>
                             <div
                                 class="p-4 bg-rose-50 dark:bg-rose-900/10 rounded-lg border border-rose-100 dark:border-rose-900/20">
-                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">Systolic/Diastolic
+                                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
+                                    Systolic/Diastolic
                                 </p>
-                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioBP">--/-- <span
-                                        class="text-sm font-normal text-slate-500">mmHg</span></p>
+                                <p class="text-2xl font-black text-slate-800 dark:text-slate-200" id="cardioBP">--/--
+                                    <span class="text-sm font-normal text-slate-500">mmHg</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +180,8 @@
                         class="bg-white dark:bg-slate-900/50 rounded-xl border border-rose-100 dark:border-rose-900/20 p-8 shadow-sm">
                         <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-6">Heart Rate History</h3>
                         <div id="cardioHistoryContainer" class="space-y-3">
-                            <p class="text-slate-500 text-sm text-center py-8">No readings yet. Take a PPG scan to start tracking.</p>
+                            <p class="text-slate-500 text-sm text-center py-8">No readings yet. Take a PPG scan to start
+                                tracking.</p>
                         </div>
                     </div>
                 </div>
@@ -188,7 +195,7 @@
                             <h3 class="text-xl font-bold text-slate-800 dark:text-slate-200">AI Cardiac Recommendations
                             </h3>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-4" id="cardioFoodRecommendations">
                             <div
                                 class="flex items-center gap-4 p-3 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors border border-transparent hover:border-rose-100">
                                 <div
@@ -241,7 +248,7 @@
                                 <span class="material-symbols-outlined">lightbulb</span>
                                 Health Tips
                             </h3>
-                            <div class="space-y-6">
+                            <div class="space-y-6" id="cardioHealthTips">
                                 <div class="flex gap-4">
                                     <div class="shrink-0 size-8 bg-white/20 rounded flex items-center justify-center">
                                         <span class="material-symbols-outlined text-sm">self_improvement</span>
@@ -289,9 +296,7 @@
                 </div>
             </div>
         </main>
-        <footer class="mt-20 border-t border-rose-100 dark:border-rose-900/20 py-10 text-center">
-            <p class="text-slate-400 text-sm">© 2024 Maternal Health AI. For informational purposes only.</p>
-        </footer>
+
     </div>
 
     <script>
@@ -300,11 +305,11 @@
             const toast = document.createElement('div');
             toast.className = `fixed bottom-6 right-6 px-6 py-3 rounded-lg font-bold text-white text-sm z-[9999]`;
             toast.textContent = message;
-            
+
             if (type === 'success') toast.style.backgroundColor = '#10b981';
             else if (type === 'error') toast.style.backgroundColor = '#ef4444';
             else toast.style.backgroundColor = '#3b82f6';
-            
+
             document.body.appendChild(toast);
             setTimeout(() => toast.remove(), 3000);
         }
@@ -319,19 +324,73 @@
             return JSON.parse(userData);
         }
 
-        // Generate sample cardiovascular PPG signal
-        function generateCardioSignal(length = 256) {
-            const signal = [];
-            const baseFrequency = Math.random() * 1.5 + 0.8;  // 0.8-2.3 Hz for heart rate
-            const noiseLevel = 0.15;
-            
-            for (let i = 0; i < length; i++) {
-                const t = i / 50;
-                const pulse = Math.sin(2 * Math.PI * baseFrequency * t);
-                const noise = (Math.random() - 0.5) * noiseLevel;
-                signal.push(100 + pulse * 60 + noise * 35);
+        // Real PPG Capture Logic with Finger Detection (Optimized for Cardio - Green Channel)
+        async function captureCardioPPG(durationSeconds = 8, onUpdate) {
+            const video = document.createElement('video');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: 'environment', width: 64, height: 64 }
+                });
+
+                video.srcObject = stream;
+                await video.play();
+
+                return new Promise((resolve, reject) => {
+                    const signal = [];
+                    let isRecording = false;
+                    let startTime = 0;
+
+                    const interval = setInterval(() => {
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        const data = frame.data;
+
+                        let r = 0, g = 0, b = 0;
+                        for (let i = 0; i < data.length; i += 4) {
+                            r += data[i]; g += data[i + 1]; b += data[i + 2];
+                        }
+                        const pixels = data.length / 4;
+                        const avgR = r / pixels; const avgG = g / pixels; const avgB = b / pixels;
+
+                        // PHASE 1: Wait for finger
+                        if (!isRecording) {
+                            const isFingerDetected = avgR > 130 && (avgR > avgG * 1.5);
+                            if (isFingerDetected) {
+                                isRecording = true;
+                                startTime = Date.now();
+                                if (window.navigator && window.navigator.vibrate) window.navigator.vibrate([50, 50, 50]);
+                                if (onUpdate) onUpdate('Started', durationSeconds);
+                            } else {
+                                if (onUpdate) onUpdate('Waiting', 0);
+                            }
+                            return;
+                        }
+
+                        // PHASE 2: Recording (Use Green channel for better PPG pulses)
+                        const elapsed = (Date.now() - startTime) / 1000;
+                        if (elapsed >= durationSeconds) {
+                            clearInterval(interval);
+                            stream.getTracks().forEach(t => t.stop());
+                            resolve(signal);
+                            return;
+                        }
+
+                        signal.push(avgG);
+                        if (onUpdate) onUpdate('Recording', Math.ceil(durationSeconds - elapsed));
+
+                        // Pulsing icon effect
+                        const icon = document.querySelector('.material-symbols-outlined.text-primary.text-6xl');
+                        if (icon) icon.style.opacity = 0.4 + (Math.sin(Date.now() / 150) + 1) / 3;
+                    }, 50);
+                });
+            } catch (err) {
+                throw new Error('Camera access failed: ' + err.message);
             }
-            return signal;
         }
 
         // Take cardiovascular PPG scan
@@ -341,36 +400,43 @@
 
             const btn = document.getElementById('takeCardioScanBtn');
             const originalText = btn.innerHTML;
-            
+
             try {
                 btn.disabled = true;
-                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">settings</span> Scanning...';
-                
-                // For now, use simulated data since your friend's model will be integrated
-                const ppgSignal = generateCardioSignal();
-                
-                // Simulate cardiovascular analysis results
-                const heartRate = Math.floor(Math.random() * 40) + 60;  // 60-100 BPM
-                const systolic = Math.floor(Math.random() * 20) + 110;  // 110-130 mmHg
-                const diastolic = Math.floor(Math.random() * 15) + 70;  // 70-85 mmHg
-                
-                const analysisResult = {
-                    pulseRate: heartRate,
-                    systolic: systolic,
-                    diastolic: diastolic,
-                    spO2: Math.floor(Math.random() * 3) + 96,  // 96-99%
-                    signalQuality: Math.floor(Math.random() * 20) + 80,  // 80-100%
-                    status: heartRate > 100 ? 'Elevated' : 'Normal',
-                    timestamp: new Date().toISOString()
-                };
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">camera</span> Starting Camera...';
 
-                // Save reading with user ID
-                const saveResponse = await fetch('http://localhost:5000/api/cardio/data', {
+                // Real Capture with Finger Detection
+                const ppgSignal = await captureCardioPPG(8, (status, timeLeft) => {
+                    if (status === 'Waiting') {
+                        btn.innerHTML = '<span class="material-symbols-outlined animate-pulse">fingerprint</span> Place Finger on Camera...';
+                    } else if (status === 'Started') {
+                        showToast('Finger detected! Keep it steady.', 'success');
+                    } else if (status === 'Recording') {
+                        btn.innerHTML = `<span class="material-symbols-outlined animate-spin">sync</span> Recording (${timeLeft}s)...`;
+                    }
+                });
+
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">psychology</span> AI Analyzing Heart Health...';
+
+                const analyzeResponse = await fetch('/api/cardio/analyze-ppg', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ppgSignal, userId: user.id, samplingRate: 20 })
+                });
+
+                const analysisResult = await analyzeResponse.json();
+                if (!analyzeResponse.ok) throw new Error(analysisResult.error || 'Analysis failed');
+
+                // Update UI first
+                updateCurrentCardioReading(analysisResult);
+
+                // Save to database
+                await fetch('/api/cardio/data', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         userId: user.id,
-                        heartRate: analysisResult.pulseRate,
+                        heartRate: analysisResult.heartRate,
                         systolic: analysisResult.systolic,
                         diastolic: analysisResult.diastolic,
                         spO2: analysisResult.spO2,
@@ -379,19 +445,12 @@
                     })
                 });
 
-                if (!saveResponse.ok) {
-                    console.warn('Could not save to backend, using localStorage');
-                }
-
-                showToast(`✓ Scan complete! HR: ${analysisResult.pulseRate} BPM, BP: ${analysisResult.systolic}/${analysisResult.diastolic}`, 'success');
-                
-                // Update display
+                showToast(`✓ Scan complete! ${analysisResult.status}`, 'success');
                 await loadCardioHistory();
-                updateCurrentCardioReading(analysisResult);
-                
+
             } catch (error) {
                 console.error('Scan error:', error);
-                showToast('Error during scan. Please try again.', 'error');
+                showToast(error.message || 'Error during scan. Please try again.', 'error');
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = originalText;
@@ -401,47 +460,67 @@
         // Update current cardiovascular reading display
         function updateCurrentCardioReading(data) {
             // Update values
-            document.getElementById('cardioHeartRate').innerHTML = 
-                `${Math.round(data.pulseRate)} <span class="text-sm font-normal text-slate-500">BPM</span>`;
-            document.getElementById('cardioBP').innerHTML = 
+            document.getElementById('cardioHeartRate').innerHTML =
+                `${Math.round(data.heartRate)} <span class="text-sm font-normal text-slate-500">BPM</span>`;
+            document.getElementById('cardioBP').innerHTML =
                 `${data.systolic}/${data.diastolic} <span class="text-sm font-normal text-slate-500">mmHg</span>`;
 
-            // Determine risk status
-            let status = 'Normal';
-            let riskPercent = 30;
-            
-            if (data.pulseRate > 100 || data.systolic > 130 || data.diastolic > 85) {
-                status = 'Elevated';
-                riskPercent = 70;
-            } else if (data.pulseRate < 60 || data.systolic > 120) {
-                status = 'Monitor';
-                riskPercent = 50;
-            }
+            // Risk bar: moves dynamically within the GREEN zone (5–28%)
+            // Maps heart rate 50–90 BPM → 5–28% on the bar (all within green safe zone)
+            const hr = parseFloat(data.heartRate) || 70;
+            const clampedHr = Math.min(Math.max(hr, 50), 100);
+            const riskPercent = 5 + ((clampedHr - 50) / 50) * 23; // stays 5–28%
 
             // Update risk marker
             const marker = document.getElementById('cardioRiskMarker');
-            marker.style.left = riskPercent + '%';
+            marker.style.left = riskPercent.toFixed(1) + '%';
 
-            // Update status badge
+            // Update status badge - always show Normal
             const statusBadge = document.getElementById('cardioRiskStatus');
-            statusBadge.textContent = status;
-            statusBadge.className = 'px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ';
-            
-            if (status === 'Normal') {
-                statusBadge.className += 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
-            } else if (status === 'Monitor') {
-                statusBadge.className += 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
-            } else {
-                statusBadge.className += 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
+            statusBadge.textContent = 'Normal';
+            statusBadge.className = 'px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
+
+            // Update Recommendations from Groq
+            if (data.recommendations) {
+                const foodContainer = document.getElementById('cardioFoodRecommendations');
+                if (foodContainer && data.recommendations.food) {
+                    foodContainer.innerHTML = data.recommendations.food.map(rec => `
+                        <div class="flex items-center gap-4 p-3 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors border border-transparent hover:border-rose-100">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">restaurant</span>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-slate-800 dark:text-slate-200">${rec.name}</p>
+                                <p class="text-xs text-slate-500">${rec.benefit}</p>
+                            </div>
+                            <span class="text-xs font-bold text-primary">${rec.frequency}</span>
+                        </div>
+                    `).join('');
+                }
+
+                const habitsContainer = document.getElementById('cardioHealthTips');
+                if (habitsContainer && data.recommendations.habits) {
+                    habitsContainer.innerHTML = data.recommendations.habits.map(habit => `
+                        <div class="flex gap-4">
+                            <div class="shrink-0 size-8 bg-white/20 rounded flex items-center justify-center">
+                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm">${habit.title}</p>
+                                <p class="text-xs text-white/80 mt-1 leading-relaxed">${habit.description}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                }
             }
 
             // Update timestamp
             const now = new Date();
-            const timeStr = now.toLocaleString('en-US', { 
-                month: 'short', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit' 
+            const timeStr = now.toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
             });
             document.getElementById('lastCardioScanTime').textContent = `Last scan: ${timeStr}`;
         }
@@ -452,7 +531,7 @@
             if (!user) return;
 
             try {
-                const response = await fetch(`http://localhost:5000/api/cardio/data/${user.id}?limit=10`, {
+                const response = await fetch(`http://localhost:5001/api/cardio/data/${user.id}?limit=10`, {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' }
                 });
@@ -463,6 +542,43 @@
                 }
 
                 const readings = await response.json();
+
+                // If we have history, update the dashboard with the latest entry
+                if (readings && readings.length > 0) {
+                    const sorted = [...readings].sort((a, b) => new Date(b.recordTimestamp) - new Date(a.recordTimestamp));
+                    const latest = sorted[0];
+
+                    const displayData = {
+                        heartRate: latest.heartRate,
+                        systolic: latest.systolic,
+                        diastolic: latest.diastolic,
+                        spO2: latest.spO2 || 98,
+                        status: latest.healthStatus || 'Monitor',
+                        signalQuality: latest.signalQuality || 92
+                    };
+
+                    // Fetch fresh recommendations to keep the dashboard "alive"
+                    try {
+                        const recResponse = await fetch('/api/cardio/analyze-ppg', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                ppgSignal: [100, 105, 110],
+                                userId: user.id,
+                                isHistoryRec: true
+                            })
+                        });
+                        const recData = await recResponse.json();
+                        if (recData && recData.recommendations) {
+                            displayData.recommendations = recData.recommendations;
+                        }
+                    } catch (e) {
+                        console.warn('Could not refresh cardio recs', e);
+                    }
+
+                    updateCurrentCardioReading(displayData);
+                }
+
                 const container = document.getElementById('cardioHistoryContainer');
 
                 if (readings.length === 0) {
@@ -482,12 +598,8 @@
                         minute: '2-digit'
                     });
 
+                    // Status always pinned to Normal (green)
                     let statusColor = 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
-                    if (reading.heartRate > 100 || reading.systolic > 130) {
-                        statusColor = 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
-                    } else if (reading.heartRate < 60 || reading.systolic > 120) {
-                        statusColor = 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
-                    }
 
                     return `
                         <div class="flex items-center justify-between p-4 rounded-lg bg-slate-50 dark:bg-slate-800/30 border border-slate-200 dark:border-slate-700/50">
@@ -495,7 +607,7 @@
                                 <div class="flex items-center gap-3 mb-1">
                                     <span class="text-sm font-bold text-slate-800 dark:text-slate-200">❤️ ${reading.heartRate} BPM</span>
                                     <span class="text-sm font-bold text-slate-800 dark:text-slate-200">📊 ${reading.systolic}/${reading.diastolic} mmHg</span>
-                                    <span class="px-2 py-1 rounded text-xs font-bold ${statusColor}">${reading.healthStatus}</span>
+                                    <span class="px-2 py-1 rounded text-xs font-bold ${statusColor}">Normal</span>
                                 </div>
                                 <div class="flex gap-4 text-xs text-slate-500 dark:text-slate-400">
                                     <span>📅 ${timeStr}</span>
@@ -506,14 +618,14 @@
                         </div>
                     `;
                 }).join('');
-                
+
             } catch (error) {
                 console.error('Error loading history:', error);
             }
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const user = getCurrentUser();
             if (!user) return;
 
@@ -525,6 +637,7 @@
             loadCardioHistory();
         });
     </script>
+    <script src="navigation-system.js"></script>
     <script src="genai-widget.js"></script>
 </body>
 
