@@ -50,15 +50,6 @@ Pink Maternal follows a modern **Microservices Architecture**:
 
 ---
 
-## 📸 Presentation Suggestions
-
-To showcase this project effectively:
-1.  **Record a UI Walkthrough:** Start from the login, navigate through the Anemia and Cardio sections, and demonstrate the notification bell and profile settings we built.
-2.  **Highlight the "Ask AI" Feature:** Show how the AI assistant responds differently based on whether you are on the home dashboard or a specific diagnostic page.
-3.  **Demonstrate Responsiveness:** Show the app working seamlessly in both Light and Dark modes.
-
----
-
 ## 📂 Project Structure
 ```text
 ├── Backend/          # Node.js Express server
@@ -68,14 +59,5 @@ To showcase this project effectively:
 │   └── *.html        # Specific health modules
 └── ML/               # Python-based diagnostic engines
 ```
-
----
-
-## 🚀 Getting Started
-1.  **Backend:** `cd Backend && npm start`
-2.  **ML Services:** Launch the FastAPI servers for Anemia, Cardio, and Jaundice.
-3.  **Frontend:** Open `index.html` in any modern browser.
-
----
 
 **Developed with ❤️ for mothers and clinicians everywhere.**
